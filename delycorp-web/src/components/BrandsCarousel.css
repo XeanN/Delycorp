@@ -1,0 +1,102 @@
+    .brands-carousel-section {
+    padding: 60px 0 80px;
+    background-color: #fff;
+    /* No usamos overflow:hidden aquí para permitir que el hijo sea full width */
+    }
+
+    .carousel-title {
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    font-weight: 800;
+    margin-bottom: 40px;
+    /* Alineado con el resto de tu contenido gracias a .container en el JSX */
+    }
+
+    /* CONTENEDOR FULL WIDTH (De borde a borde) */
+    .carousel-full-width-wrapper {
+    width: 100%; /* Ocupa toda la pantalla */
+    overflow-x: scroll; /* Permite scroll */
+    cursor: grab; /* Manito para agarrar */
+    padding: 20px 0; /* Espacio para las sombras */
+    
+    /* Ocultar barra de scroll estandar */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+    }
+
+    /* Ocultar barra de scroll en Chrome/Safari */
+    .carousel-full-width-wrapper::-webkit-scrollbar {
+    display: none;
+    }
+
+    .carousel-full-width-wrapper:active {
+    cursor: grabbing; /* Manito cerrada al agarrar */
+    }
+
+    /* PISTA DE ELEMENTOS */
+    .carousel-track {
+    display: flex;
+    gap: 40px; /* Espacio entre círculos */
+    width: max-content; /* Se estira lo que sea necesario */
+    padding: 0 20px; /* Un poco de aire a los lados */
+    }
+
+    /* ÍTEM INDIVIDUAL */
+    .brand-item {
+    flex-shrink: 0;
+    width: 160px; /* Tamaño un poco más grande */
+    transition: transform 0.3s ease;
+    }
+
+    .brand-link {
+    text-decoration: none;
+    display: block;
+    /* Evita comportamiento raro al arrastrar enlaces */
+    user-select: none; 
+    -webkit-user-drag: none;
+    }
+
+    /* CÍRCULO BLANCO */
+    .brand-circle {
+    width: 160px;
+    height: 160px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* Sombra suave idéntica a Colombina */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06); 
+    border: 1px solid #f5f5f5;
+    transition: all 0.3s ease;
+    }
+
+    /* Efecto Hover */
+    .brand-circle:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+    border-color: var(--color-primary); /* Borde rojo sutil al hover */
+    }
+
+    .brand-circle img {
+    max-width: 75%;
+    max-height: 75%;
+    object-fit: contain;
+    pointer-events: none; /* Importante para que el arrastre funcione bien */
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+    .carousel-title {
+        font-size: 2rem;
+        text-align: center;
+    }
+    .brand-item, .brand-circle {
+        width: 120px;
+        height: 120px;
+    }
+    .carousel-track {
+        gap: 20px;
+    }
+    }

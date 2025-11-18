@@ -1,0 +1,270 @@
+    .category-page {
+    background-color: #f9f9f9; /* Fondo general gris muy suave */
+    padding-top: 80px; /* Espacio para el header sticky */
+    min-height: 100vh;
+    }
+
+    /* --- 1. BANNER SUPERIOR --- */
+    .category-banner {
+    position: relative;
+    height: 200px;
+    /* Degradado rojo/naranja estilo Colombina */
+    background: linear-gradient(135deg, #E31C23 0%, #b71c1c 100%); 
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    color: white;
+    }
+
+    /* Formas geométricas decorativas (Triángulos sutiles) */
+    .banner-bg-shapes::before,
+    .banner-bg-shapes::after {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    transform: rotate(45deg);
+    }
+    .banner-bg-shapes::before { left: -50px; bottom: -150px; }
+    .banner-bg-shapes::after { left: 200px; top: -150px; }
+
+    .banner-content {
+    position: relative;
+    z-index: 2;
+    }
+
+    .banner-content h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin: 0;
+    text-transform: capitalize;
+    }
+
+    /* --- 2. BREADCRUMBS --- */
+    .breadcrumbs {
+    padding: 20px 1rem;
+    font-size: 0.9rem;
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    }
+    .breadcrumbs a { color: #888; }
+    .breadcrumbs .icon { font-size: 0.7rem; }
+    .breadcrumbs .current { color: var(--color-corporate-blue); font-weight: 700; }
+
+    /* --- LAYOUT (SIDEBAR + GRID) --- */
+    .category-layout {
+    display: grid;
+    grid-template-columns: 280px 1fr; /* Sidebar fijo 280px, resto flexible */
+    gap: 40px;
+    padding-bottom: 60px;
+    }
+
+    /* --- 3. SIDEBAR (FILTROS) --- */
+    .sidebar-filters {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    height: fit-content;
+    }
+
+    .filter-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 15px;
+    }
+
+    .filter-header h3 {
+    font-size: 1.1rem;
+    color: var(--color-text-main);
+    margin: 0;
+    }
+
+    .filter-header .arrow {
+    transition: transform 0.3s;
+    font-size: 0.8rem;
+    }
+    .filter-header .arrow.open { transform: rotate(180deg); }
+
+    .filter-list {
+    list-style: none;
+    padding: 0;
+    }
+
+    .filter-list li {
+    margin-bottom: 12px;
+    }
+
+    .filter-list a {
+    color: #555;
+    font-size: 0.95rem;
+    display: block;
+    transition: all 0.2s;
+    }
+
+    .filter-list a:hover {
+    color: var(--color-corporate-blue);
+    padding-left: 5px;
+    font-weight: 600;
+    }
+
+    /* Línea roja vertical a la izquierda para la categoría activa (opcional) */
+    .filter-list li:first-child a {
+    color: var(--color-corporate-blue);
+    font-weight: 700;
+    border-left: 3px solid var(--color-primary);
+    padding-left: 10px;
+    }
+
+    .other-category {
+    margin-top: 15px;
+    border-top: 1px solid #f5f5f5;
+    padding-top: 10px;
+    }
+
+    /* --- 4. PRODUCT GRID --- */
+    .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 25px;
+    }
+
+    /* TARJETA DE PRODUCTO */
+    .product-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 350px; /* Altura fija para uniformidad */
+    }
+
+    .product-card:hover {
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transform: translateY(-5px);
+    border-color: #eee;
+    }
+
+    .product-image {
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    }
+
+    .product-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    }
+
+    .product-info h4 {
+    font-size: 1rem;
+    color: var(--color-corporate-blue);
+    margin: 0 0 5px;
+    line-height: 1.4;
+    font-weight: 700;
+    }
+
+    .product-weight {
+    font-size: 0.85rem;
+    color: #888;
+    display: block;
+    margin-bottom: 15px;
+    }
+
+    /* Botón ver detalle (invisible hasta hover o sutil) */
+    .btn-details {
+    display: inline-block;
+    padding: 8px 20px;
+    border: 1px solid var(--color-corporate-blue);
+    border-radius: 20px;
+    color: var(--color-corporate-blue);
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: all 0.3s;
+    }
+
+    .product-card:hover .btn-details {
+    background-color: var(--color-corporate-blue);
+    color: #fff;
+    }
+    
+    /* Estilo para el filtro activo en el sidebar */
+    .filter-list span {
+    cursor: pointer;
+    display: block;
+    padding: 5px 0;
+    color: #555;
+    transition: color 0.2s;
+    }
+
+    .filter-list span:hover {
+    color: var(--color-corporate-blue);
+    }
+
+    .active-filter {
+    color: var(--color-corporate-blue) !important;
+    font-weight: 700;
+    padding-left: 10px;
+    border-left: 3px solid var(--color-primary);
+    }
+
+    /* Tarjeta de producto refinada */
+    .product-brand {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: #999;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 5px;
+    }
+
+    .product-sub {
+    font-size: 0.8rem;
+    color: #777;
+    margin-bottom: 15px;
+    display: block;
+    }
+
+    /* Mensaje de no encontrado */
+    .no-products {
+    text-align: center;
+    padding: 50px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    .btn-reset {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 25px;
+    background-color: var(--color-corporate-blue);
+    color: #fff;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    }
+    /* Responsive */
+    @media (max-width: 992px) {
+    .category-layout {
+        grid-template-columns: 1fr; /* Columna única en tablet/móvil */
+    }
+    .sidebar-filters {
+        margin-bottom: 30px;
+    }
+    }

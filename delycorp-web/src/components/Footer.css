@@ -1,0 +1,127 @@
+    .footer {
+    background-color: #fff;
+    padding: 60px 0 20px;
+    font-family: 'Inter', sans-serif; /* O la fuente que estés usando */
+    color: #666; /* Gris suave para textos */
+    }
+
+    .footer-grid {
+    display: grid;
+    /* La primera columna es el doble de ancha que las demás */
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr; 
+    gap: 40px;
+    margin-bottom: 60px;
+    }
+
+    /* --- COLUMNA DE MARCA (Izquierda) --- */
+    .footer-logo {
+    height: 60px;
+    margin-bottom: 20px;
+    display: block;
+    }
+
+    .footer-desc {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: #777;
+    margin-bottom: 25px;
+    max-width: 300px; /* Limitar ancho del texto para que se vea bloque */
+    text-align: justify; /* Justificado como en la imagen a veces se ve mejor */
+    }
+
+    /* Iconos Sociales (Círculos Azules) */
+    .footer-social-icons {
+    display: flex;
+    gap: 12px;
+    }
+
+        .footer-social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    background-color: var(--color-primary); /* CAMBIO: ROJO desde el inicio */
+    color: #fff;
+    border-radius: 50%;
+    font-size: 1rem;
+    transition: transform 0.3s ease, background-color 0.3s;
+    }
+
+    .footer-social-icons a:hover {
+    transform: translateY(-3px);
+    background-color: var(--color-primary); /* CAMBIO: AZUL al pasar el mouse */
+    }
+
+    /* --- COLUMNAS DE ENLACES --- */
+    .footer-link-col h4 {
+    color: #000; /* Títulos en negro o gris muy oscuro */
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    }
+
+    .footer-link-col ul {
+    list-style: none;
+    padding: 0;
+    }
+
+    .footer-link-col li {
+    margin-bottom: 15px; /* Espaciado generoso entre links */
+    }
+
+    .footer-link-col a {
+    color: #444; /* Gris oscuro para enlaces */
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: color 0.2s;
+    }
+
+    .footer-link-col a:hover {
+    color: var(--color-corporate-blue); /* Azul al pasar el mouse */
+    }
+
+    /* --- BARRA INFERIOR --- */
+    .footer-bottom {
+    /* Línea divisoria azul muy suave como en la imagen */
+    border-top: 1px solid #aebae2; 
+    padding-top: 30px;
+    text-align: center; /* Todo centrado */
+    }
+
+    .copyright-text {
+    font-size: 0.75rem; /* Texto pequeñito legal */
+    color: #888;
+    }
+
+    .copyright-text a {
+    color: #888;
+    text-decoration: underline;
+    margin: 0 2px;
+    }
+
+    .copyright-text a:hover {
+    color: var(--color-corporate-blue);
+    }
+
+    /* --- RESPONSIVE --- */
+    @media (max-width: 1024px) {
+    .footer-grid {
+        grid-template-columns: 1fr 1fr 1fr; /* 3 columnas en tablet */
+        gap: 30px;
+    }
+    .footer-brand-col {
+        grid-column: span 3; /* Logo ocupa todo el ancho arriba */
+        margin-bottom: 20px;
+    }
+    }
+
+    @media (max-width: 600px) {
+    .footer-grid {
+        grid-template-columns: 1fr; /* 1 columna en celular */
+        text-align: left;
+    }
+    .footer-brand-col {
+        grid-column: span 1;
+    }
+    }
