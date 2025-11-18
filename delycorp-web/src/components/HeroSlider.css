@@ -1,0 +1,125 @@
+    .hero-slider {
+    position: relative;
+    width: 100%;
+    height: 600px; /* Altura del banner, ajustable */
+    overflow: hidden;
+    margin-top: 120px; /* IMPORTANTE: Este margen empuja el slider debajo del Header fijo */
+    }
+
+    .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    display: flex;
+    align-items: center;
+    }
+
+    .slide.active {
+    opacity: 1;
+    z-index: 1;
+    }
+
+    /* Capa oscura para que el texto se lea bien sobre la foto */
+    .slide::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); 
+    z-index: 1;
+    }
+
+    .slide-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    max-width: 1600px; /* Alineado con tu header */
+    padding: 0 1rem;
+    }
+
+    .slide-content h2 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+
+    .slide-content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    }
+
+    .cta-button {
+    background-color: var(--color-primary); /* Rojo Delycorp */
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background 0.3s;
+    }
+
+    .cta-button:hover {
+    background-color: #b71c1c; /* Rojo más oscuro */
+    }
+
+    /* Controles (Flechas y Puntos) */
+    .slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.2);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    padding: 15px;
+    cursor: pointer;
+    z-index: 10;
+    transition: background 0.3s;
+    }
+
+    .slider-arrow:hover { background: rgba(255,255,255,0.5); }
+    .slider-arrow.left { left: 20px; }
+    .slider-arrow.right { right: 20px; }
+
+    .slider-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+    }
+
+    .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.5);
+    cursor: pointer;
+    }
+
+    .dot.active {
+    background: white;
+    transform: scale(1.2);
+    }
+
+    /* Responsive: Ajustar altura en celular */
+    @media (max-width: 768px) {
+    .hero-slider { height: 400px; margin-top: 100px; }
+    .slide-content h2 { font-size: 2rem; }
+    .slide-content p { font-size: 1rem; }
+    .slider-arrow { display: none; } /* Ocultar flechas en celular para limpiar vista */
+    }
