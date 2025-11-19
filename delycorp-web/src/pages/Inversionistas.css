@@ -1,0 +1,165 @@
+.inversionistas-page {
+    padding-top: 80px; /* Espacio para el header sticky */
+    min-height: 100vh;
+    background-color: #fff;
+}
+
+/* --- 1. HERO BANNER --- */
+.investor-hero {
+    height: 350px;
+    /* Imagen de negocios/reunión corporativa */
+    background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.investor-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 59, 113, 0.8); /* Filtro Azul Delycorp */
+}
+
+.investor-hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+}
+
+.investor-hero-content h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.investor-hero-content p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* --- 2. INTRODUCCIÓN Y VALOR --- */
+.investor-intro {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.investor-intro h2 {
+    color: var(--color-corporate-blue);
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.investor-intro p {
+    color: #555;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+}
+
+/* --- 3. CIFRAS CLAVE (GRID) --- */
+.investor-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.investor-stat-card {
+    background: #f9f9f9;
+    padding: 40px 20px;
+    border-radius: 8px;
+    border-top: 4px solid var(--color-primary); /* Detalle Rojo */
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.investor-stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.stat-icon-large {
+    font-size: 3rem;
+    color: var(--color-corporate-blue);
+    margin-bottom: 15px;
+}
+
+.stat-value-large {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--color-text-main);
+    display: block;
+    margin-bottom: 5px;
+}
+
+.stat-label-large {
+    color: #777;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* --- 4. SECCIÓN DE CONTACTO DIRECTO (BOTÓN) --- */
+.investor-contact-section {
+    background-color: #f0f4f8; /* Gris azulado muy suave */
+    padding: 80px 0;
+    text-align: center;
+}
+
+.contact-box {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.contact-box h3 {
+    color: var(--color-corporate-blue);
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.contact-box p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.btn-investor-contact {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--color-primary); /* Botón Rojo */
+    color: white;
+    padding: 18px 40px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 5px 15px rgba(227, 28, 35, 0.3);
+}
+
+.btn-investor-contact:hover {
+    background-color: #c0151b;
+    transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .investor-stats-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .investor-hero h1 { font-size: 2.5rem; }
+}

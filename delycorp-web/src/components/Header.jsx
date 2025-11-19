@@ -1,9 +1,9 @@
-    import React, { useState, useEffect, useRef } from 'react';
-    import { Link, useNavigate } from 'react-router-dom';
-    import { FaSearch, FaRegUser, FaChevronDown, FaChevronUp, FaBars, FaTimes } from 'react-icons/fa';
-    import './Header.css';
+import React, { useState, useEffect, useRef } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { FaSearch, FaRegUser, FaChevronDown, FaChevronUp, FaBars, FaTimes } from 'react-icons/fa';
+import './Header.css';
 
-    const Header = () => {
+const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [searchTerm, setSearchTerm] = useState(""); 
@@ -15,9 +15,6 @@
     const menuRef = useRef(null);
 
     // --- FUNCIÓN PARA CREAR ENLACES LIMPIOS (SLUGS) ---
-    // Convierte "Chocolatería" -> "chocolateria"
-    // Convierte "Cuidado de hogar" -> "cuidado-de-hogar"
-    // Convierte "Productos de campaña" -> "productos-de-campana"
     const createSlug = (text) => {
         return text
         .toLowerCase()
@@ -30,10 +27,10 @@
     const handleSearch = (e) => {
         e.preventDefault(); 
         if (searchTerm.trim()) {
-        navigate(`/productos?search=${encodeURIComponent(searchTerm)}`);
-        setIsMobileMenuOpen(false); 
-        setSearchTerm(""); 
-        setDesktopMenuOpen(null);
+            navigate(`/productos?search=${encodeURIComponent(searchTerm)}`);
+            setIsMobileMenuOpen(false); 
+            setSearchTerm(""); 
+            setDesktopMenuOpen(null);
         }
     };
 
@@ -77,8 +74,18 @@
             }
         ]
         },
-        nosotros: { items: ["Quiénes Somos", "Historia", "Nuestro equipo"] },
+        // --- ESTRUCTURA DE PÁGINAS SEPARADAS ---
+        nosotros: { 
+            items: ["Quiénes Somos", "Historia", "Nuestro equipo"] 
+        },
         sostenibilidad: { items: ["Destacados", "Estrategia", "Gestión de Sostenibilidad", "Resultados", "Reportes", "Fundación Delycorp"] }
+    };
+
+    // Helper para generar el enlace con el slug correcto
+    const getNosotrosLink = (item) => {
+        const slug = createSlug(item);
+        // La ruta base es /nosotros/ y el slug
+        return `/nosotros/${slug}`; 
     };
 
     return (
@@ -118,7 +125,6 @@
                                 <ul>
                                 {group.items.map((item, j) => (
                                     <li key={j}>
-                                    {/* USAMOS createSlug AQUÍ PARA LIMPIAR EL ENLACE */}
                                     <Link to={`/productos/${createSlug(item)}`} onClick={() => setDesktopMenuOpen(null)}>
                                         {item}
                                     </Link>
@@ -137,6 +143,7 @@
                     )}
                 </li>
 
+                {/* --- MENÚ NOSOTROS (ESCRITORIO) --- */}
                 <li className="menu-item-has-children relative-parent">
                     <a href="#" onClick={(e) => toggleDesktopMenu(e, 'nosotros')} className={desktopMenuOpen === 'nosotros' ? 'active-link' : ''}>
                     Nosotros {desktopMenuOpen === 'nosotros' ? <FaChevronUp className="menu-arrow" /> : <FaChevronDown className="menu-arrow" />}
@@ -145,7 +152,9 @@
                     <div className="desktop-dropdown simple-menu">
                         <ul>
                         {menuStructure.nosotros.items.map((item, i) => (
-                            <li key={i}><Link to={`/nosotros/${createSlug(item)}`} onClick={() => setDesktopMenuOpen(null)}>{item}</Link></li>
+                            <li key={i}>
+                                <Link to={getNosotrosLink(item)} onClick={() => setDesktopMenuOpen(null)}>{item}</Link>
+                            </li>
                         ))}
                         </ul>
                     </div>
@@ -176,7 +185,7 @@
             </div>
         </div>
 
-        {/* DRAWER MÓVIL */}
+        {/* --- DRAWER MÓVIL --- */}
         <div className={`mobile-drawer-overlay ${isMobileMenuOpen ? 'open' : ''}`} onClick={() => setIsMobileMenuOpen(false)}></div>
         <div className={`mobile-drawer ${isMobileMenuOpen ? 'open' : ''}`}>
             <div className="drawer-header">
@@ -204,10 +213,21 @@
                     <div className="nested-label single-link"><Link to="/promociones" onClick={() => setIsMobileMenuOpen(false)}>Promociones</Link></div>
                 </div>
                 </li>
+                
+                {/* --- MENÚ NOSOTROS (MÓVIL) --- */}
                 <li className={`has-submenu ${activeSubmenu === 'nosotros' ? 'active' : ''}`}>
                     <div className="menu-label bold-label" onClick={() => toggleSubmenu('nosotros')}><span>Nosotros</span>{activeSubmenu === 'nosotros' ? <FaChevronUp /> : <FaChevronDown />}</div>
-                    <div className="submenu-container" style={{ maxHeight: activeSubmenu === 'nosotros' ? '500px' : '0' }}><ul>{menuStructure.nosotros.items.map((item, i) => (<li key={i}><Link to="#" className="simple-link" onClick={() => setIsMobileMenuOpen(false)}>{item}</Link></li>))}</ul></div>
+                    <div className="submenu-container" style={{ maxHeight: activeSubmenu === 'nosotros' ? '500px' : '0' }}>
+                        <ul>
+                            {menuStructure.nosotros.items.map((item, i) => (
+                                <li key={i}>
+                                    <Link to={getNosotrosLink(item)} className="simple-link" onClick={() => setIsMobileMenuOpen(false)}>{item}</Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
                 </li>
+
                 <li className={`has-submenu ${activeSubmenu === 'sostenibilidad' ? 'active' : ''}`}>
                     <div className="menu-label bold-label" onClick={() => toggleSubmenu('sostenibilidad')}><span>Sostenibilidad</span>{activeSubmenu === 'sostenibilidad' ? <FaChevronUp /> : <FaChevronDown />}</div>
                     <div className="submenu-container" style={{ maxHeight: activeSubmenu === 'sostenibilidad' ? '500px' : '0' }}><ul>{menuStructure.sostenibilidad.items.map((item, i) => (<li key={i}><Link to="#" className="simple-link" onClick={() => setIsMobileMenuOpen(false)}>{item}</Link></li>))}</ul></div>
@@ -226,6 +246,6 @@
         </div>
         </header>
     );
-    };
+};
 
-    export default Header;
+export default Header;
