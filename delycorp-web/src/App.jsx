@@ -1,10 +1,21 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
-import Footer from './components/Footer'; // 1. Importar Footer
-import CtaSection from './components/CtaSection'; // 1. Importar aquí
+import Footer from './components/Footer';
+import CtaSection from './components/CtaSection'; 
 import Home from './pages/Home';
-import ProductCategory from './pages/ProductCategory'; // <--- NUEVO
-import ProductDetail from './pages/ProductDetail';     // <--- NUEVO
+// Importamos las 3 páginas nuevas
+import QuienesSomos from './pages/QuienesSomos'; 
+import Historia from './pages/Historia';
+import NuestroEquipo from './pages/NuestroEquipo';
+import TrabajaConNosotros from './pages/TrabajaConNosotros';
+import Inversionistas from './pages/Inversionistas';
+import Proveedores from './pages/Proveedores';
+import Clientes from './pages/Clientes';
+import Contacto from './pages/Contacto';
+import ProductCategory from './pages/ProductCategory';
+import ProductDetail from './pages/ProductDetail';
+import Noticias from './pages/Noticias';
+import NoticiaDetalle from './pages/NoticiaDetalle';
 import './App.css';
 
 function App() {
@@ -12,27 +23,34 @@ function App() {
     <BrowserRouter>
       <div className="app-container">
         <Header />
-        
         <main className="main-content">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/nosotros" element={<div style={{paddingTop: '150px', textAlign:'center'}}><h1>Página Nosotros</h1></div>} />
-            {/* RUTAS DINÁMICAS DE PRODUCTOS */}
-            {/* Esta ruta atrapa: /productos/chocolateria, /productos/dulces, etc. */}
-            <Route path="/productos/:category" element={<ProductCategory />} />
             
-            {/* Ruta para todos los productos (usaremos Chocolatería por defecto o puedes crear una página 'All') */}
-            <Route path="/productos" element={<ProductCategory />} />
+            {/* --- RUTAS SEPARADAS DE NOSOTROS --- */}
+            <Route path="/nosotros/quienes-somos" element={<QuienesSomos />} />
+            <Route path="/nosotros/historia" element={<Historia />} />
+            <Route path="/nosotros/nuestro-equipo" element={<NuestroEquipo />} />
+            {/* Si alguien va solo a /nosotros, lo redirigimos a la primera subpágina */}
+            <Route path="/nosotros" element={<QuienesSomos />} /> 
 
-            {/* Ruta detalle producto */}
+            {/* Rutas de Productos */}
+            <Route path="/productos/:category" element={<ProductCategory />} />
+            <Route path="/productos" element={<ProductCategory />} />
             <Route path="/producto/:id" element={<ProductDetail />} />
+            {/* Agrega esto dentro de <Routes> */}
+            <Route path="/trabaja" element={<TrabajaConNosotros />} />
+            <Route path="/inversionistas" element={<Inversionistas />} />
+            <Route path="/proveedores" element={<Proveedores />} />
+            <Route path="/clientes" element={<Clientes />} />
+            <Route path="/contacto" element={<Contacto />} />
+            <Route path="/noticias" element={<Noticias />} />
+            <Route path="/noticias/:id" element={<NoticiaDetalle />} />
             <Route path="/contacto" element={<div style={{paddingTop: '150px', textAlign:'center'}}><h1>Contáctanos</h1></div>} />
           </Routes>
         </main>
-        {/* 2. Colocar el CTA aquí para que sea GLOBAL (en todas las páginas) */}
         <CtaSection />
-        
-        <Footer /> {/* 2. Colocar Footer aquí, al final */}
+        <Footer />
       </div>
     </BrowserRouter>
   );

@@ -140,7 +140,7 @@
                 {productsToShow.map((product) => (
                     <Link to={`/producto/${product.id}`} key={product.id} className="product-card">
                     <div className="product-image">
-                        <img src={product.image} alt={product.name} />
+                        <img src={product.img_primary} alt={product.name} />
                     </div>
                     <div className="product-info">
                         <span className="product-brand">{product.brand}</span>
