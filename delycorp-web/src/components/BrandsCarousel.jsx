@@ -15,7 +15,7 @@
         { name: "Deyelli", logoUrl: getAssetUrl('logos/deyelli.jpg'), link: "/marcas/deyelli" },
         { name: "D'loe", logoUrl: getAssetUrl('logos/dloe.jpg'), link: "/marcas/dloe" },
         { name: "Monfer", logoUrl: getAssetUrl('logos/monfer.jpg'), link: "/marcas/monfer" },
-        { name: "Monfer", logoUrl: getAssetUrl('logos/guandy.jpg'), link: "/marcas/guandy" },
+        { name: "Monfer", logoUrl: getAssetUrl('logos/huandy.jpg'), link: "/marcas/huandy" },
     ];
 
     // Duplicamos la lista varias veces para asegurar que sea "infinita" en pantallas grandes
