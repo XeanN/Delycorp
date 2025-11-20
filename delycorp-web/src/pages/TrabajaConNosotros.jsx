@@ -37,68 +37,57 @@
 
             {/* 3. FORMULARIO DE POSTULACIÓN */}
             <section className="application-container">
-            <h3 className="form-title">Envíanos tu CV</h3>
-            
-            <form className="form-grid" onSubmit={(e) => e.preventDefault()}>
-                
-                {/* Nombre */}
-                <div className="form-group">
-                <label>Nombre Completo *</label>
-                <input type="text" placeholder="Ej: Juan Pérez" required />
-                </div>
+                <h3 className="form-title">Envíanos tu CV</h3>
 
-                {/* Apellidos */}
-                <div className="form-group">
-                <label>Apellidos *</label>
-                <input type="text" placeholder="Ej: Rodriguez" required />
-                </div>
+                <p className="culture-text" style={{ textAlign: "center", marginBottom: "20px" }}>
+                    Completa nuestro formulario oficial o envíanos tu CV directamente por WhatsApp.
+                </p>
 
-                {/* Email */}
-                <div className="form-group">
-                <label>Correo Electrónico *</label>
-                <input type="email" placeholder="juan@correo.com" required />
-                </div>
+                <div style={{ display: "flex", justifyContent: "center", gap: "20px", flexWrap: "wrap" }}>
 
-                {/* Teléfono */}
-                <div className="form-group">
-                <label>Teléfono / Celular *</label>
-                <input type="tel" placeholder="+51 999 999 999" required />
-                </div>
+                    {/* Botón Google Form */}
+                    <a 
+                    href="https://forms.gle/qUUU5sFffE9UHfDe8"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-submit"
+                    style={{
+                        textDecoration: "none",
+                        padding: "15px 30px",
+                        fontSize: "18px",
+                        display: "inline-block",
+                        backgroundColor: "#e50046",
+                        color: "white",
+                        borderRadius: "8px",
+                        transition: "0.3s"
+                    }}
+                    >
+                    Ir al Formulario
+                    </a>
 
-                {/* Área de Interés */}
-                <div className="form-group full-width">
-                <label>Área de Interés</label>
-                <select>
-                    <option value="">Selecciona una opción</option>
-                    <option value="ventas">Ventas y Comercial</option>
-                    <option value="logistica">Logística y Almacén</option>
-                    <option value="admin">Administración y Finanzas</option>
-                    <option value="marketing">Marketing</option>
-                    <option value="otros">Otros</option>
-                </select>
-                </div>
+                    {/* Botón WhatsApp */}
+                    <a 
+                    href="https://wa.me/51999022179?text=Hola%20Delycorp,%20deseo%20postular%20y%20adjunto%20mi%20CV."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-submit"
+                    style={{
+                        textDecoration: "none",
+                        padding: "15px 30px",
+                        fontSize: "18px",
+                        display: "inline-block",
+                        backgroundColor: "#25D366",
+                        color: "white",
+                        borderRadius: "8px",
+                        transition: "0.3s"
+                    }}
+                    >
+                    Enviar CV por WhatsApp
+                    </a>
 
-                {/* Mensaje */}
-                <div className="form-group full-width">
-                <label>Mensaje o Presentación</label>
-                <textarea rows="4" placeholder="Cuéntanos brevemente sobre ti..."></textarea>
                 </div>
-
-                {/* Subir CV */}
-                <div className="form-group full-width">
-                <label>Adjuntar CV (PDF o Word)</label>
-                <div className="file-upload-wrapper">
-                    <FaCloudUploadAlt className="file-icon" />
-                    <p className="file-upload-text">Haz clic para seleccionar tu archivo</p>
-                    <input type="file" style={{display: 'none'}} id="cv-upload" />
-                </div>
-                </div>
-
-                {/* Botón */}
-                <button type="submit" className="btn-submit">Enviar Postulación</button>
-
-            </form>
             </section>
+
 
         </div>
         </div>
