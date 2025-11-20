@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { FaSearch, FaRegUser, FaChevronDown, FaChevronUp, FaBars, FaTimes } from 'react-icons/fa';
+import { getAssetUrl } from '../utils/assets'; // 1. Importar
 import './Header.css';
 
 const Header = () => {
@@ -92,7 +93,7 @@ const Header = () => {
         <header className={`header ${isScrolled ? 'scrolled' : ''}`} ref={menuRef}>
         <div className="container header-grid">
             <div className="header-logo">
-            <Link to="/"><img src="/logo.png" alt="Delycorp" /></Link>
+            <Link to="/"><img src={getAssetUrl('logo.png')} alt="Delycorp" /></Link>
             </div>
 
             <div className="header-content">
@@ -104,7 +105,9 @@ const Header = () => {
                 </form>
                 <div className="secondary-links">
                 <Link to="/inversionistas">Inversionistas</Link><Link to="/proveedores">Proveedores</Link><Link to="/clientes">Clientes</Link>
-                <div className="region-selector">Perú <FaChevronDown className="icon-xs"/></div><div className="user-profile-btn"><FaRegUser /></div>
+                <a href="https://http://200.1.181.153:9090/DelyCorp/" className="btn-facturacion" target="_blank" rel="noopener noreferrer">
+        Facturación Electrónica
+    </a>
                 </div>
             </div>
 
