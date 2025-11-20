@@ -1,5 +1,6 @@
     import React, { useState, useEffect } from 'react';
     import './HeroSlider.css';
+    import { getAssetUrl } from '../utils/assets'; // 1. Importar
     import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
     const HeroSlider = () => {
@@ -9,19 +10,19 @@
     const slides = [
         {
         id: 1,
-        image: "/BANNER_3.png", // Imagen corporativa/oficina
+        image: getAssetUrl("BANNER_3.png"), // Imagen corporativa/oficina
         title: "Excelencia en Distribución",
         subtitle: "Llevamos calidad a cada rincón del Perú."
         },
         {
         id: 2,
-        image: "/BANNER_2.png", // Imagen de alimentos/almacén
+        image: getAssetUrl("BANNER_2.png"), // Imagen de alimentos/almacén
         title: "Nuestras Marcas",
         subtitle: "Representamos a las mejores marcas del mercado."
         },
         {
         id: 3,
-        image: "/BANNER_1.png", // Imagen de equipo/reunión
+        image: getAssetUrl("BANNER_1.png"), // Imagen de equipo/reunión
         title: "Compromiso y Pasión",
         subtitle: "Un equipo dedicado a servirte mejor."
         }

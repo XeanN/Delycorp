@@ -1,4 +1,4 @@
-import { HashRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import CtaSection from './components/CtaSection'; 
@@ -46,7 +46,6 @@ function App() {
             <Route path="/contacto" element={<Contacto />} />
             <Route path="/noticias" element={<Noticias />} />
             <Route path="/noticias/:id" element={<NoticiaDetalle />} />
-            <Route path="/contacto" element={<div style={{paddingTop: '150px', textAlign:'center'}}><h1>Contáctanos</h1></div>} />
           </Routes>
         </main>
         <CtaSection />

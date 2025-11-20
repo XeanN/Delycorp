@@ -1,5 +1,6 @@
     import React from 'react';
     import { Link } from 'react-router-dom';
+    import { getAssetUrl } from '../utils/assets';
     import './CtaSection.css';
 
     const CtaSection = () => {
@@ -21,7 +22,7 @@
             {/* Lado Derecho: Imagen / Logo Grande */}
             <div className="cta-image">
             {/* Aquí podrías poner un logo grande, un icono o una imagen relevante */}
-            <img src="/logo.png" alt="Delycorp Gran Distribuidor" />
+            <img src={getAssetUrl('logo.png')} alt="Delycorp Gran Distribuidor" />
             </div>
 
         </div>

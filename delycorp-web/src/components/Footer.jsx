@@ -1,5 +1,6 @@
     import React from 'react';
     import { Link } from 'react-router-dom';
+    import { getAssetUrl } from '../utils/assets';
     import { FaFacebookF, FaLinkedinIn, FaInstagram, FaYoutube } from 'react-icons/fa';
     import './Footer.css';
 
@@ -13,7 +14,7 @@
             
             {/* COLUMNA 1: MARCA + DESCRIPCIÓN + SOCIALES */}
             <div className="footer-brand-col">
-                <img src="/logo.png" alt="Delycorp" className="footer-logo" />
+                <img src={getAssetUrl('logo.png')} alt="Delycorp" className="footer-logo" />
                 <p className="footer-desc">
                 Compañía global de alimentos que busca cautivar al consumidor a través de la innovación y el sabor de sus productos. 
                 Sustentada en una marca sombrilla fuerte, marcas reconocidas y de alto valor percibido.
