@@ -40,7 +40,7 @@
                         <FaPhoneAlt className="info-icon" />
                         <div className="info-text">
                             <h4>Teléfono / Celular</h4>
-                            <p>(01) 555-0199 <br /> +51 999 999 999</p>
+                            <p>+51 945 930 510 <br /> +51 999 022 179</p>
                         </div>
                     </div>
 
@@ -48,7 +48,7 @@
                         <FaEnvelope className="info-icon" />
                         <div className="info-text">
                             <h4>Correo Electrónico</h4>
-                            <p>ventas@delycorp.pe <br /> contacto@delycorp.pe</p>
+                            <p>ventas@delycorp.pe </p>
                         </div>
                     </div>
 
@@ -56,7 +56,7 @@
                     <div className="social-section">
                         <h3>Síguenos en nuestras redes:</h3>
                         <div className="social-buttons">
-                            <a href="https://facebook.com" target="_blank" rel="noreferrer" className="btn-social btn-facebook">
+                            <a href="https://www.facebook.com/delycorpdeyelli#" target="_blank" rel="noreferrer" className="btn-social btn-facebook">
                                 <FaFacebookF /> Facebook
                             </a>
                             <a href="https://instagram.com" target="_blank" rel="noreferrer" className="btn-social btn-instagram">
@@ -65,7 +65,7 @@
                             <a href="https://tiktok.com" target="_blank" rel="noreferrer" className="btn-social btn-tiktok">
                                 <FaTiktok /> TikTok
                             </a>
-                            <a href="https://wa.me/51999999999" target="_blank" rel="noreferrer" className="btn-social btn-whatsapp">
+                            <a href="https://api.whatsapp.com/send?phone=51999022179&text=%C2%A1Hola!%F0%9F%98%8A%20Quiero%20hacer%20un(os)%20pedido(s)%0A" target="_blank" rel="noreferrer" className="btn-social btn-whatsapp">
                                 <FaWhatsapp /> WhatsApp
                             </a>
                             <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="btn-social btn-linkedin">

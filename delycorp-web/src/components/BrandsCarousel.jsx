@@ -1,4 +1,5 @@
     import React, { useEffect, useRef, useState } from 'react';
+    import { getAssetUrl } from '../utils/assets'; // 1. Importar
     import { Link } from 'react-router-dom';
     import './BrandsCarousel.css';
 
@@ -11,17 +12,9 @@
 
     // LISTA DE MARCAS (Basada en tus fotos: Colombina, Amazon, etc.)
     const brands = [
-        { name: "Colombina", logoUrl: "https://via.placeholder.com/150?text=Colombina", link: "/marcas/colombina" },
-        { name: "Bon Bon Bum", logoUrl: "https://via.placeholder.com/150?text=BonBonBum", link: "/marcas/bon-bon-bum" },
-        { name: "Amazon", logoUrl: "https://via.placeholder.com/150?text=Amazon", link: "/marcas/amazon" },
-        { name: "Deyelli", logoUrl: "https://via.placeholder.com/150?text=Deyelli", link: "/marcas/deyelli" },
-        { name: "D'loe", logoUrl: "https://via.placeholder.com/150?text=D'loe", link: "/marcas/dloe" },
-        { name: "Monfer", logoUrl: "https://via.placeholder.com/150?text=Monfer", link: "/marcas/monfer" },
-        { name: "Millows", logoUrl: "https://via.placeholder.com/150?text=Millows", link: "/marcas/millows" },
-        { name: "Piazza", logoUrl: "https://via.placeholder.com/150?text=Piazza", link: "/marcas/piazza" },
-        { name: "Nucita", logoUrl: "https://via.placeholder.com/150?text=Nucita", link: "/marcas/nucita" },
-        { name: "Bridge", logoUrl: "https://via.placeholder.com/150?text=Bridge", link: "/marcas/bridge" },
-        { name: "Coffee Delight", logoUrl: "https://via.placeholder.com/150?text=Coffee", link: "/marcas/coffee-delight" },
+        { name: "Deyelli", logoUrl: getAssetUrl('logos/deyelli.jpg'), link: "/marcas/deyelli" },
+        { name: "D'loe", logoUrl: getAssetUrl('logos/dloe.jpg'), link: "/marcas/dloe" },
+        { name: "Monfer", logoUrl: getAssetUrl('logos/monfer.jpg'), link: "/marcas/monfer" },
     ];
 
     // Duplicamos la lista varias veces para asegurar que sea "infinita" en pantallas grandes

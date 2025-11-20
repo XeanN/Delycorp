@@ -1,3 +1,4 @@
+      import { getAssetUrl } from '../utils/assets'; // 1. Importar
     export const newsData = [
     {
         id: 1,
@@ -16,7 +17,7 @@
         title: "Lanzamiento de Campaña Navideña: Panetones Deyelli",
         date: "05 OCT, 2024",
         category: "Lanzamientos",
-        image: "https://images.unsplash.com/photo-1606913084603-3e7702b01627?q=80&w=1000&auto=format&fit=crop", // Foto Panetón/Navidad
+        image: getAssetUrl('navideños.jpg'), // Foto Panetón/Navidad
         summary: "Descubre nuestra nueva línea de panetones Delitón y Ricotón, diseñados para compartir en familia.",
         content: `
         <p>La navidad ya llegó a Delycorp. Estamos orgullosos de presentar nuestra línea de panetones bajo la marca Deyelli, disponibles en presentaciones de caja y bolsa.</p>
@@ -28,7 +29,7 @@
         title: "D'Loe: La bebida refrescante que conquista el mercado",
         date: "28 SEP, 2024",
         category: "Marcas",
-        image: "https://images.unsplash.com/photo-1623200202506-e4a7c3172a96?q=80&w=1000&auto=format&fit=crop", // Foto Bebida Aloe
+        image: getAssetUrl('bebidas.jpg'), // Foto Bebida Aloe
         summary: "Con trozos de pulpa real y sin octógonos, D'Loe se posiciona como la opción saludable favorita.",
         content: `
         <p>Nuestra marca exclusiva D'Loe sigue ganando terreno. Gracias a su composición con aloe vera real y su perfil saludable libre de octógonos, se ha convertido en la opción preferida para quienes buscan refrescarse saludablemente.</p>

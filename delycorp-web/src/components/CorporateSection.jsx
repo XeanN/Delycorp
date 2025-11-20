@@ -1,5 +1,6 @@
     import React from 'react';
     import { Link } from 'react-router-dom';
+    import { getAssetUrl } from '../utils/assets';
     import './CorporateSection.css';
 
     const CorporateSection = () => {
@@ -36,8 +37,8 @@
             {/* COLUMNA DERECHA: IMAGEN */}
             <div className="corporate-image">
             {/* Imagen de ejemplo: almacén o equipo trabajando */}
-            <img 
-                src="https://images.unsplash.com/photo-1491933382434-500287f9b54b?q=80&w=1000&auto=format&fit=crop" 
+            <img    
+                src={getAssetUrl('sostenibilidad.jpg')} 
                 alt="Delycorp Equipo" 
             />
             {/* Elemento decorativo (cuadro rojo) */}

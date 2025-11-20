@@ -14,7 +14,22 @@
 
     // Asegurar que la imagen secundaria sea diferente antes de mostrarla
     const hasSecondaryImage = product && product.img_secondary && product.img_primary !== product.img_secondary;
+    
+    // --- 1. CONFIGURACIÓN DE WHATSAPP ---
+    // Coloca aquí el número de ventas de Delycorp (con el código 51 de Perú delante)
+    const phoneNumber = "51999022179"; // He puesto el del camión de la foto anterior
 
+    const handleWhatsApp = () => {
+        // Creamos el mensaje personalizado con el nombre y código del producto
+        const message = `Hola Delycorp, estoy interesado en el producto: *${product.name}* (Código: ${product.code}). Quisiera saber stock y precios.`;
+        
+        // Creamos el enlace oficial de WhatsApp
+        const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+        
+        // Abrimos en una nueva pestaña
+        window.open(url, '_blank');
+    };
+    
     if (!product) {
         return (
         <div className="container" style={{paddingTop: '150px', textAlign: 'center'}}>
@@ -94,7 +109,9 @@
                 Este producto está diseñado para generar el efecto ¡Wow! en tus clientes gracias a su calidad y precio.
             </p>
             
-            <button style={{ 
+            <button 
+            onClick={handleWhatsApp}
+            style={{ 
                 padding: '15px 40px', 
                 backgroundColor: 'var(--color-primary)', 
                 color: 'white', 
