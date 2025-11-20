@@ -71,7 +71,7 @@ const Header = () => {
             },
             {
             name: "Marcas",
-            items: ["Deyelli", "D'loe", "Monfer", "Huracán", "Angelitos", "Huandy", "Tayas", "Crash", "King cookies"]
+            items: ["Deyelli", "D'loe", "Monfer", "Huracán", "Angelitos", "Guandy", "Tayas", "Crash", "King cookies"]
             }
         ]
         },

@@ -32,7 +32,7 @@
                         <FaMapMarkerAlt className="info-icon" />
                         <div className="info-text">
                             <h4>Dirección</h4>
-                            <p>Calle Los Talladores 370<br />Urb. El Artesano, Ate Vitarte - Lima</p>
+                            <p>Pasaje Giraldez 111<br />Av. La Cultura 701 - Mercado Productores Santa Anita - Lima</p>
                         </div>
                     </div>
 
@@ -48,7 +48,7 @@
                         <FaEnvelope className="info-icon" />
                         <div className="info-text">
                             <h4>Correo Electrónico</h4>
-                            <p>ventas@delycorp.pe </p>
+                            <p>comercialretail@delycorp.pe </p>
                         </div>
                     </div>
 
@@ -59,10 +59,10 @@
                             <a href="https://www.facebook.com/delycorpdeyelli#" target="_blank" rel="noreferrer" className="btn-social btn-facebook">
                                 <FaFacebookF /> Facebook
                             </a>
-                            <a href="https://instagram.com" target="_blank" rel="noreferrer" className="btn-social btn-instagram">
+                            <a href="https://www.instagram.com/deyelli.pe/" target="_blank" rel="noreferrer" className="btn-social btn-instagram">
                                 <FaInstagram /> Instagram
                             </a>
-                            <a href="https://tiktok.com" target="_blank" rel="noreferrer" className="btn-social btn-tiktok">
+                            <a href="https://www.tiktok.com/@deyelli.pe" target="_blank" rel="noreferrer" className="btn-social btn-tiktok">
                                 <FaTiktok /> TikTok
                             </a>
                             <a href="https://api.whatsapp.com/send?phone=51999022179&text=%C2%A1Hola!%F0%9F%98%8A%20Quiero%20hacer%20un(os)%20pedido(s)%0A" target="_blank" rel="noreferrer" className="btn-social btn-whatsapp">
@@ -78,7 +78,7 @@
                 {/* COLUMNA DERECHA: MAPA (Ubicación real aproximada en Ate) */}
                 <div className="map-container">
                     <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3902.0038358466885!2d-76.96271668561802!3d-12.043281745107453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c68965000001%3A0x123456789abcdef!2sC.%20Los%20Talladores%20370%2C%20Ate%2015022!5e0!3m2!1ses-419!2spe!4v1625000000000!5m2!1ses-419!2spe" 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3902.0049699285914!2d-76.95117982421517!3d-12.043178488193371!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c710720dc423%3A0xe0888c7257c342e0!2sDelycorp%20Sac!5e0!3m2!1ses-419!2spe!4v1763676690914!5m2!1ses-419!2spe"
                         width="600" 
                         height="450" 
                         style={{border:0}} 

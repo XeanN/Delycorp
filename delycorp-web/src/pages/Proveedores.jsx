@@ -81,7 +81,7 @@
                 Si cuentas con productos innovadores y buscas un aliado estratégico para expandir tu mercado, queremos conocerte.
             </p>
             
-            <a href="mailto:compras@delycorp.pe" className="btn-provider-contact">
+            <a href="mailto:comercialretail@delycorp.pe" className="btn-provider-contact">
                 Contactar al Área de Compras
             </a>
         </section>
