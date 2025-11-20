@@ -191,10 +191,39 @@
     .drawer-secondary-menu { list-style: none; padding: 0; margin: 0; }
     .drawer-secondary-menu a { display: block; padding: 12px 25px; font-size: 0.95rem; color: var(--color-corporate-blue); text-decoration: none; font-weight: 500; }
 
-    /* --- MEDIA QUERIES --- */
-    @media (max-width: 1024px) {
-    .desktop-only { display: none !important; }
-    .mobile-toggle { display: block; }
-    .header-logo img { height: 45px; }
-    .header-grid { gap: 15px; }
+        
+        /* --- MEDIA QUERIES --- */
+        @media (max-width: 1024px) {
+        .desktop-only { display: none !important; }
+        .mobile-toggle { display: block; }
+        .header-logo img { height: 45px; }
+        .header-grid { gap: 15px; }
+        }
+
+        /* Estilo para el botón de Facturación Electrónica */
+    .btn-facturacion {
+    border: 2px solid var(--color-corporate-blue); /* Color morado */
+    color: #0a0a0a !important; /* Fuerza el color del texto */
+    background-color: transparent;
+    padding: 6px 16px;
+    border-radius: 20px; /* Borde redondeado tipo píldora */
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    white-space: nowrap; /* Evita que el texto se parta en dos líneas */
+    font-size: 0.9rem;
+    margin-left: 15px; /* Un poco de separación de los otros links */
+    }
+
+    .btn-facturacion:hover {
+    background-color:  var(--color-corporate-blue);
+    color: white !important;
+    }
+
+    /* Ajuste para pantallas medianas si es necesario */
+    @media (max-width: 1100px) {
+        .btn-facturacion {
+            padding: 4px 10px;
+            font-size: 0.8rem;
+        }
     }
