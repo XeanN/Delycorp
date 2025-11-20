@@ -1,30 +1,34 @@
 // src/router/index.jsx
 import { Routes, Route } from "react-router-dom";
 
-// Páginas
+// Páginas principales
 import Home from "../pages/Home";
 
+// Nosotros
 import QuienesSomos from "../pages/QuienesSomos";
 import Historia from "../pages/Historia";
 import NuestroEquipo from "../pages/NuestroEquipo";
 
+// Servicios / Trabajo / Relaciones
 import TrabajaConNosotros from "../pages/TrabajaConNosotros";
 import Inversionistas from "../pages/Inversionistas";
 import Proveedores from "../pages/Proveedores";
 import Clientes from "../pages/Clientes";
 
-import Contacto from "../pages/Contacto";
-
+// Productos
 import ProductCategory from "../pages/ProductCategory";
 import ProductDetail from "../pages/ProductDetail";
 
+// Contacto
+import Contacto from "../pages/Contacto";
+
+// Noticias
 import Noticias from "../pages/Noticias";
 import NoticiaDetalle from "../pages/NoticiaDetalle";
 
 export default function AppRouter() {
   return (
     <Routes>
-
       {/* Home */}
       <Route path="/" element={<Home />} />
 
@@ -51,7 +55,6 @@ export default function AppRouter() {
       {/* Noticias */}
       <Route path="/noticias" element={<Noticias />} />
       <Route path="/noticias/:id" element={<NoticiaDetalle />} />
-
     </Routes>
   );
 }
