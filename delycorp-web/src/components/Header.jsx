@@ -105,7 +105,7 @@ const Header = () => {
                 </form>
                 <div className="secondary-links">
                 <Link to="/inversionistas">Inversionistas</Link><Link to="/proveedores">Proveedores</Link><Link to="/clientes">Clientes</Link>
-                <a href="https://http://200.1.181.153:9090/DelyCorp/" className="btn-facturacion" target="_blank" rel="noopener noreferrer">
+                <a href="http://200.1.181.153:9090/DelyCorp/" className="btn-facturacion" target="_blank" rel="noopener noreferrer">
         Facturación Electrónica
     </a>
                 </div>
