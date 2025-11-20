@@ -32,15 +32,12 @@
             {/* COLUMNA 2: NOSOTROS */}
             <div className="footer-link-col">
                 <h4>Nosotros</h4>
-                <ul>
+                <ul>    
                 <li><Link to="/nosotros">Quiénes Somos</Link></li>
-                <li><Link to="/historia">Historia</Link></li>
-                <li><Link to="/plantas">Plantas de Producción</Link></li>
-                <li><Link to="/energia">Energía</Link></li>
-                <li><Link to="/legal">Información Legal</Link></li>
-                <li><Link to="/etica">Línea Ética</Link></li>
+                <li><Link to="/nosotros/historia">Historia</Link></li>
+                <li><Link to="/nosotros/nuestro-equipo">Nuestro Equipo</Link></li>
                 </ul>
-            </div>
+            </div>  
 
             {/* COLUMNA 3: SOSTENIBILIDAD */}
             <div className="footer-link-col">
@@ -70,9 +67,8 @@
             <div className="footer-link-col">
                 <h4>Contacto</h4>
                 <ul>
+                <li><Link to="/contacto">Contáctanos</Link></li>
                 <li><Link to="/trabaja">Trabaja con Nosotros</Link></li>
-                <li><Link to="/atencion">Líneas de atención</Link></li>
-                <li><Link to="/faq">Preguntas Frecuentes</Link></li>
                 </ul>
             </div>
 

@@ -1,5 +1,6 @@
     import React from 'react';
     import { Link } from 'react-router-dom';
+    import { getAssetUrl } from '../utils/assets'; // 1. Importar
     import './BrandsGrid.css';
 
     const BrandsGrid = () => {
@@ -8,38 +9,38 @@
         {
         id: 1,
         title: "Dulces",
-        image: "https://images.unsplash.com/photo-1582058928278-013a2ccbdc8c?q=80&w=800&auto=format&fit=crop",
-        link: "/productos/Dulces"
+        image: getAssetUrl('dulces.jpg'),
+        link: "/productos/dulces"
         },
-        {
+        {   
         id: 2,
         title: "Chocolatería",
-        image: "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?q=80&w=800&auto=format&fit=crop",
-        link: "/productos/Chocolatería"
+        image: getAssetUrl('chocolates.jpg'),
+        link: "/productos/chocolateria"
         },
         {
         id: 3,
         title: "Bebidas",
-        image: "https://images.unsplash.com/photo-1623652557934-a0ee703e5432?q=80&w=800&auto=format&fit=crop",
-        link: "/productos/Bebidas"
+        image: getAssetUrl('bebidas.jpg'),
+        link: "/productos/bebidas"
         },
         {
         id: 4,
         title: "Cuidado de hogar",
-        image: "https://images.unsplash.com/photo-1606312619070-d48b4c652a52?q=80&w=800&auto=format&fit=crop",
-        link: "/productos/Cuidado de hogar"
+        image: getAssetUrl('productos_limpieza.jpg'),
+        link: "/productos/cuidado-de-hogar"
         },
         {
-        id: 5,
+        id: 5,  
         title: "Enlatados",
-        image: "https://images.unsplash.com/photo-1560008581-09826d1de69e?q=80&w=800&auto=format&fit=crop",
-        link: "/productos/Enlatados"
+        image: getAssetUrl('durazno.jpg'),
+        link: "/productos/enlatados"
         },
         {
         id: 6,
         title: "Productos de campaña",
-        image: "https://images.unsplash.com/photo-1595348020949-87cdfbb44174?q=80&w=800&auto=format&fit=crop",
-        link: "/productos/Productos de campaña"
+        image: getAssetUrl('navideños.jpg'),
+        link: "/productos/productos-de-campana"
         }
     ];
 

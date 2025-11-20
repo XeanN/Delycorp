@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { getAssetUrl } from '../utils/assets'; // 1. Importar
 import { FaChevronRight } from 'react-icons/fa';
 import './NosotrosShared.css'; 
 
@@ -52,7 +53,7 @@ const Historia = () => {
                         {/* Bloque Derecho (Imagen - Historia) */}
                         <div className="content-right-image">
                             <img 
-                                src="https://images.unsplash.com/photo-1542844510-18e95085d386?q=80&w=1000&auto=format&fit=crop"
+                                src={getAssetUrl('historia.png')}
                                 alt="Historia de la compañía" 
                             />
                         </div>

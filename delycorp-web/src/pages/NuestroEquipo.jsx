@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { getAssetUrl } from '../utils/assets';
 import { FaChevronRight } from 'react-icons/fa';
 import './NosotrosShared.css'; 
 
@@ -58,7 +59,7 @@ const NuestroEquipo = () => {
                         {/* Bloque Imagen (Se moverá a la izquierda) */}
                         <div className="content-right-image">
                             <img 
-                                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1000&auto=format&fit=crop"
+                                src={getAssetUrl('nuestro-equipo.png')}
                                 alt="Nuestro equipo" 
                             />
                         </div>

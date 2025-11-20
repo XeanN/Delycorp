@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { getAssetUrl } from '../utils/assets'; // 1. Importar
 import { FaChevronRight } from 'react-icons/fa';
 import './NosotrosShared.css'; 
 import StatsGrid from '../components/StatsGrid'; 
@@ -55,7 +56,7 @@ const QuienesSomos = () => {
                         
                         <div className="content-right-image">
                             <img 
-                                src="https://images.unsplash.com/photo-1606857500127-14227918a56c?q=80&w=1000&auto=format&fit=crop"
+                                src={getAssetUrl('quienes-somos.png')}
                                 alt="Equipo Delycorp" 
                             />
                         </div>

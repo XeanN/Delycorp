@@ -8,7 +8,7 @@
     { slug: "enlatados", name: "Enlatados" },
     { slug: "productos-de-campana", name: "Productos de campaña" }
     ];
-
+    
     // Función para generar un placeholder de imagen único
     const getPlaceholderUrl = (id, color) => 
     `https://via.placeholder.com/300/${color}/fff?text=ID-${id}`;
