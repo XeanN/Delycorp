@@ -18,6 +18,7 @@ import Clientes from "../pages/Clientes";
 // Productos
 import ProductCategory from "../pages/ProductCategory";
 import ProductDetail from "../pages/ProductDetail";
+import CatalogPage from '../pages/CatalogPage';
 
 // Contacto
 import Contacto from "../pages/Contacto";
@@ -39,9 +40,10 @@ export default function AppRouter() {
       <Route path="/nosotros/nuestro-equipo" element={<NuestroEquipo />} />
 
       {/* Productos */}
-      <Route path="/productos" element={<ProductCategory />} />
-      <Route path="/productos/:category" element={<ProductCategory />} />
+      <Route path="/productos" element={<CatalogPage />} />
+      <Route path="/productos/:categorySlug" element={<CatalogPage />} />
       <Route path="/producto/:id" element={<ProductDetail />} />
+      <Route path="/marca/:brandSlug" element={<CatalogPage />} />
 
       {/* Páginas adicionales */}
       <Route path="/trabaja" element={<TrabajaConNosotros />} />

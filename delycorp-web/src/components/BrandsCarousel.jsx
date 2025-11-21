@@ -12,10 +12,10 @@
 
     // LISTA DE MARCAS (Basada en tus fotos: Colombina, Amazon, etc.)
     const brands = [
-        { name: "Deyelli", logoUrl: getAssetUrl('logos/deyelli.jpg'), link: "/marcas/deyelli" },
-        { name: "D'loe", logoUrl: getAssetUrl('logos/dloe.jpg'), link: "/marcas/dloe" },
-        { name: "Monfer", logoUrl: getAssetUrl('logos/monfer.jpg'), link: "/marcas/monfer" },
-        { name: "Monfer", logoUrl: getAssetUrl('logos/huandy.jpg'), link: "/marcas/huandy" },
+        { name: "Deyelli", logoUrl: getAssetUrl('logos/deyelli.jpg'), link: "/marca/deyelli" },
+        { name: "D'loe", logoUrl: getAssetUrl('logos/dloe.jpg'), link: "/marca/dloe" },
+        { name: "Monfer", logoUrl: getAssetUrl('logos/monfer.jpg'), link: "/marca/monfer" },
+        { name: "Guandy", logoUrl: getAssetUrl('logos/huandy.jpg'), link: "/marca/Guandy" },
     ];
 
     // Duplicamos la lista varias veces para asegurar que sea "infinita" en pantallas grandes

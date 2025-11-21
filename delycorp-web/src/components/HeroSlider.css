@@ -116,10 +116,67 @@
     transform: scale(1.2);
     }
 
-    /* Responsive: Ajustar altura en celular */
-    @media (max-width: 768px) {
-    .hero-slider { height: 400px; margin-top: 100px; }
-    .slide-content h2 { font-size: 2rem; }
-    .slide-content p { font-size: 1rem; }
-    .slider-arrow { display: none; } /* Ocultar flechas en celular para limpiar vista */
+    /* --- ESTILOS RESPONSIVE PARA MÓVIL (Pégalo al final de HeroSlider.css) --- */
+@media (max-width: 768px) {
+    
+    .hero-slider {
+        /* Reducimos la altura para que no ocupe toda la pantalla vertical en móvil */
+        height: auto; 
+        min-height: 500px; 
+        /* Ajustamos el margen superior para que no choque con el header móvil */
+        margin-top: 80px; 
     }
+
+    .slide {
+        /* IMPORTANTE: Esto mueve la imagen un poco para que no se corte la cara de la chica */
+        /* Prueba con 'center' o '70% center' si la chica sale muy a la derecha */
+        background-position: 65% center; 
+    }
+
+    .slide::before {
+        /* Hacemos la capa oscura un poco más fuerte en móvil para que el texto se lea */
+        /* ya que seguramente el texto quedará encima de la chica/dibujo */
+        background: rgba(0, 0, 0, 0.6); 
+    }
+
+    .slide-content {
+        text-align: center; /* Centramos todo el texto */
+        padding: 0 20px; /* Damos aire a los costados */
+        width: 100%;
+        
+        /* Usamos flex para centrar verticalmente el contenido dentro del slider */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .slide-content h2 {
+        font-size: 2rem; /* Reducimos el título gigante */
+        line-height: 1.2;
+        margin-bottom: 15px;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.8); /* Más sombra para legibilidad */
+    }
+
+    .slide-content p {
+        font-size: 1rem;
+        line-height: 1.4;
+        margin-bottom: 25px;
+        max-width: 100%; /* Que use todo el ancho disponible */
+    }
+
+    .cta-button {
+        width: 100%; /* Botón ancho es más fácil de tocar en celular */
+        max-width: 280px;
+        padding: 15px 0; /* Botón un poco más alto */
+    }
+
+    /* Ocultamos flechas para limpiar la vista, dejamos solo los puntos */
+    .slider-arrow {
+        display: none;
+    }
+
+    .slider-dots {
+        bottom: 15px; /* Subimos un poquito los puntos */
+    }
+}

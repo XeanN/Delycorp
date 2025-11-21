@@ -69,13 +69,67 @@
     filter: drop-shadow(0 4px 6px rgba(0,0,0,0.2));
     }
 
-    /* Responsive */
-    @media (max-width: 992px) {
+    /* --- RESPONSIVE: TABLET Y MÓVIL --- */
+
+/* 1. TABLET (Menos de 992px) */
+@media (max-width: 992px) {
+    
+    .cta-section {
+        padding: 40px 0; /* Un poco más de aire arriba y abajo */
+    }
+
     .cta-grid {
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 20px;
+        grid-template-columns: 1fr; /* Una sola columna (apilado) */
+        text-align: center; /* Todo centrado */
+        gap: 30px; /* Espacio entre el texto y la imagen */
+        
+        /* Aseguramos que no pegue a los bordes laterales */
+        padding: 0 20px; 
     }
-    .cta-content h2 { font-size: 1.8rem; }
-    .cta-image img { max-height: 120px; margin-top: 10px; }
+
+    .cta-content {
+        /* Centramos el contenido flex para asegurar alineación */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
+
+    .cta-content h2 {
+        font-size: 1.8rem; /* Título equilibrado */
+        margin-bottom: 15px;
+    }
+
+    .cta-content p {
+        margin-bottom: 25px;
+        /* Importante: evita que el texto sea muy ancho y difícil de leer */
+        max-width: 500px; 
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .cta-image img {
+        max-height: 140px; /* Tamaño controlado en tablet */
+        margin-top: 0; /* El gap del grid ya se encarga del espacio */
+    }
+}
+
+/* 2. MÓVIL (Menos de 600px) */
+@media (max-width: 600px) {
+    
+    .cta-content h2 {
+        font-size: 1.5rem; /* Título un poco más pequeño en celular */
+    }
+
+    .cta-button {
+        width: 100%; /* Botón ancho completo */
+        max-width: 280px; /* Pero con un límite para que no se vea gigante */
+        padding: 12px 0; /* Más alto para facilitar el toque */
+        font-size: 1rem;
+    }
+
+    .cta-image img {
+        /* Hacemos la imagen más pequeña para que no robe protagonismo al botón */
+        max-height: 100px; 
+        margin-top: 10px;
+    }
+}

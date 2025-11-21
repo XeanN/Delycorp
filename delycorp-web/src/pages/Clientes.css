@@ -151,14 +151,128 @@
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
-/* Responsive */
-@media (max-width: 992px) {
-    .pillars-grid {
-        grid-template-columns: 1fr;
-        padding: 0 20px;
+/* =========================================
+   ESTILOS RESPONSIVE (MEJORADOS)
+   ========================================= */
+
+/* 1. TABLET (IPADS / TABLETS - 601px a 1024px) */
+@media (max-width: 1024px) {
+    
+    /* Ajuste de espaciado general */
+    .clientes-page {
+        padding-top: 70px;
     }
+    
+    .clients-hero {
+        height: 280px; /* Un poco menos alto */
+    }
+
+    .clients-hero-content h1 {
+        font-size: 2.5rem; /* Título ajustado */
+    }
+
+    /* --- PILARES (GRID) --- */
+    /* EN TABLET: Usamos 2 columnas o automático para que no se vea una lista eterna */
+    .pillars-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+        padding: 0 30px; /* Margen lateral */
+    }
+
+    /* --- CANALES (Flexbox) --- */
+    .channels-flex {
+        flex-direction: column; /* Apilamos texto e imagen */
+        text-align: center;
+        gap: 40px;
+        padding: 0 30px;
+    }
+
+    .channels-image img {
+        max-height: 350px; /* Limitamos la altura para que no sea gigante */
+        object-fit: cover;
+    }
+}
+
+/* 2. MÓVIL (CELULARES - Menos de 600px) */
+@media (max-width: 600px) {
+    
+    /* --- HERO (CABECERA) --- */
+    .clients-hero {
+        height: 220px; /* Más compacto para celular */
+        background-position: center top; /* Enfocamos mejor la imagen */
+    }
+
+    .clients-hero-content h1 {
+        font-size: 1.8rem; /* Tamaño ideal para móvil */
+        line-height: 1.2;
+    }
+
+    .clients-hero-content p {
+        font-size: 1rem;
+        max-width: 100%;
+    }
+
+    /* --- INTRODUCCIÓN --- */
+    .clients-intro-section {
+        padding: 50px 20px; /* Reducimos mucho el padding vertical */
+    }
+
+    .clients-intro-section h2 {
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+    }
+
+    .intro-box {
+        font-size: 0.95rem; /* Texto de lectura cómoda */
+        text-align: left; /* En móvil se lee mejor alineado a la izq (opcional) */
+        padding: 0 10px;
+    }
+
+    /* --- PILARES (GRID) --- */
+    .value-pillars-section {
+        padding: 40px 0 60px;
+    }
+
+    .pillars-grid {
+        grid-template-columns: 1fr; /* Una columna obligatoria */
+        gap: 25px;
+        padding: 0 20px;
+        margin-top: 30px;
+    }
+
+    .pillar-card {
+        padding: 30px 20px; /* Tarjetas más compactas */
+    }
+
+    .pillar-icon {
+        font-size: 2rem; /* Icono un poco más chico */
+        margin-bottom: 15px;
+    }
+
+    /* --- CANALES Y COBERTURA --- */
+    .channels-section {
+        padding: 50px 0;
+    }
+
     .channels-flex {
         flex-direction: column;
-        text-align: center;
+        gap: 30px;
+        padding: 0 20px;
+    }
+
+    .channels-info h3 {
+        font-size: 1.5rem;
+        text-align: center; /* Título centrado */
+    }
+
+    .channels-info p {
+        font-size: 0.95rem;
+        text-align: justify; /* Texto justificado o izq para lectura */
+    }
+
+    .channels-image img {
+        height: auto;
+        max-height: 250px; /* Imagen controlada */
+        width: 100%;
     }
 }

@@ -70,17 +70,7 @@
                     href="https://wa.me/51999022179?text=Hola%20Delycorp,%20deseo%20postular%20y%20adjunto%20mi%20CV."
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn-submit"
-                    style={{
-                        textDecoration: "none",
-                        padding: "15px 30px",
-                        fontSize: "18px",
-                        display: "inline-block",
-                        backgroundColor: "#25D366",
-                        color: "white",
-                        borderRadius: "8px",
-                        transition: "0.3s"
-                    }}
+                    className="btn-whatsapp-cv"
                     >
                     Enviar CV por WhatsApp
                     </a>

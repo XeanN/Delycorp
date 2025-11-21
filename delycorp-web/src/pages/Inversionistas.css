@@ -155,11 +155,162 @@
     transform: translateY(-2px);
 }
 
-/* Responsive */
-@media (max-width: 992px) {
-    .investor-stats-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
+/* =========================================
+   ESTILOS RESPONSIVE (INVERSIONISTAS)
+   ========================================= */
+
+/* 1. TABLET (IPADS / TABLETS - 601px a 1024px) */
+@media (max-width: 1024px) {
+    
+    .inversionistas-page {
+        padding-top: 70px;
     }
-    .investor-hero h1 { font-size: 2.5rem; }
+
+    /* Ajuste de altura del banner */
+    .investor-hero {
+        height: 280px;
+    }
+    
+    .investor-hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    /* --- GRID DE CIFRAS (INTELIGENTE) --- */
+    /* En vez de 1 columna gigante, usamos 'auto-fit'.
+       Si caben 2, pone 2. Si caben 3, pone 3. */
+    .investor-stats-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 25px;
+        padding: 0 30px; /* Margen lateral */
+    }
+
+    /* Ajuste de textos de introducción */
+    .investor-intro {
+        padding: 50px 20px;
+    }
+    
+    .investor-intro p {
+        font-size: 1rem;
+    }
+
+    /* --- BOTÓN ARREGLADO (Pégalo reemplazando el anterior) --- */
+
+.btn-investor-contact {
+    /* Flexbox para alinear icono y texto */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px; /* Espacio seguro entre el icono y la letra */
+    
+    /* Estilo del botón */
+    background-color: var(--color-primary);
+    color: white;
+    
+    /* Dimensiones inteligentes */
+    width: auto;
+    max-width: 100%; /* Asegura que no se salga de la pantalla */
+    padding: 15px 30px; /* Padding equilibrado */
+    
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(227, 28, 35, 0.3);
+    
+    /* CRUCIAL: Manejo de texto largo */
+    text-align: center;
+    line-height: 1.2; /* Si baja a 2 líneas, que no se vean separadas */
+}
+
+/* ESTO ES LO QUE ARREGLA EL ICONO */
+/* Asegúrate de que tu icono (sea <i>, <span> o <svg>) tenga esto */
+.btn-investor-contact i,
+.btn-investor-contact svg,
+.btn-investor-contact span.icon { 
+    flex-shrink: 0; /* Prohíbe al icono aplastarse o desaparecer */
+}
+
+.btn-investor-contact:hover {
+    background-color: #c0151b;
+    transform: translateY(-2px);
+}
+}
+
+/* 2. MÓVIL (CELULARES - Menos de 600px) */
+@media (max-width: 600px) {
+
+    /* --- HERO (ENCABEZADO) --- */
+    .investor-hero {
+        height: 240px; /* Altura compacta */
+        background-position: center top; /* Asegura que se vean las caras si las hay */
+    }
+
+    .investor-hero-content h1 {
+        font-size: 1.8rem; /* Título que no grita */
+        line-height: 1.2;
+        margin-bottom: 10px;
+    }
+
+    .investor-hero-content p {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    /* --- INTRODUCCIÓN --- */
+    .investor-intro {
+        padding: 40px 20px;
+        text-align: center; /* Alineación centrada para móvil */
+    }
+
+    .investor-intro h2 {
+        font-size: 1.6rem;
+    }
+
+    /* --- GRID DE CIFRAS --- */
+    .investor-stats-grid {
+        grid-template-columns: 1fr; /* Una columna */
+        gap: 20px;
+        margin-bottom: 40px;
+        padding: 0 20px; /* Margen para que no toque bordes */
+    }
+
+    .investor-stat-card {
+        padding: 30px 15px; /* Tarjeta más compacta */
+        /* Sombra suave para dar relieve en fondo blanco */
+        box-shadow: 0 5px 15px rgba(0,0,0,0.08); 
+    }
+
+    .stat-value-large {
+        font-size: 2.2rem; /* Número un poco más chico */
+    }
+
+    .stat-icon-large {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+    }
+
+    /* --- SECCIÓN DE CONTACTO --- */
+    .investor-contact-section {
+        padding: 50px 20px;
+    }
+
+    .contact-box h3 {
+        font-size: 1.5rem;
+    }
+
+    .contact-box p {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+
+    .btn-investor-contact {
+        width: 100%; /* En celular ocupa todo el ancho */
+        max-width: 320px; /* Pero con un límite para que no se vea gigante */
+        padding: 12px 20px; /* Menos padding lateral para dar espacio al texto */
+        font-size: 1rem; /* Letra un pelín más chica para que quepa mejor */
+        
+        /* Flexibilidad */
+        flex-direction: row; /* Mantenemos icono al lado */
+    }
 }
