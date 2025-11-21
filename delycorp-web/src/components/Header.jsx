@@ -67,10 +67,12 @@ const Header = () => {
         groups: [
             {
             name: "Categorías",
+            basePath: "/productos",
             items: ["Dulces", "Chocolatería", "Bebidas", "Cuidado de hogar", "Enlatados", "Productos de campaña"]
             },
             {
             name: "Marcas",
+            basePath: "/marca",
             items: ["Deyelli", "D'loe", "Monfer", "Huracán", "Angelitos", "Guandy", "Tayas", "Crash", "King cookies"]
             }
         ]
@@ -128,7 +130,10 @@ const Header = () => {
                                 <ul>
                                 {group.items.map((item, j) => (
                                     <li key={j}>
-                                    <Link to={`/productos/${createSlug(item)}`} onClick={() => setDesktopMenuOpen(null)}>
+                                    <Link 
+                                        to={`${group.basePath}/${createSlug(item)}`} 
+                                        onClick={() => setDesktopMenuOpen(null)}
+                                    >
                                         {item}
                                     </Link>
                                     </li>
@@ -209,7 +214,12 @@ const Header = () => {
                     <div key={i} className="nested-group">
                         <div className="nested-label" onClick={() => toggleNestedSubmenu(group.name)}><span>{group.name}</span>{activeNestedSubmenu === group.name ? <FaChevronUp className="icon-sm"/> : <FaChevronDown className="icon-sm"/>}</div>
                         <div className="nested-list" style={{ maxHeight: activeNestedSubmenu === group.name ? '1000px' : '0' }}>
-                        <ul>{group.items.map((item, j) => (<li key={j}><Link to={`/productos/${createSlug(item)}`} onClick={() => setIsMobileMenuOpen(false)}>{item}</Link></li>))}</ul>
+                        <ul>{group.items.map((item, j) => (<li key={j}><Link 
+                            to={`${group.basePath}/${createSlug(item)}`} 
+                            onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                            {item}
+                        </Link></li>))}</ul>
                         </div>
                     </div>
                     ))}
@@ -244,6 +254,9 @@ const Header = () => {
                 <li><Link to="/inversionistas" onClick={() => setIsMobileMenuOpen(false)}>Inversionistas</Link></li>
                 <li><Link to="/proveedores" onClick={() => setIsMobileMenuOpen(false)}>Proveedores</Link></li>
                 <li><Link to="/clientes" onClick={() => setIsMobileMenuOpen(false)}>Clientes</Link></li>
+                <a href="http://200.1.181.153:9090/DelyCorp/" className="btn-facturacion" target="_blank" rel="noopener noreferrer">
+                Facturación Electrónica
+                </a>
             </ul>
             </div>
         </div>

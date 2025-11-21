@@ -1,8 +1,8 @@
 #root {
   width: 100%;
-  margin: 0;
+  margin: 0 auto; /* Centrar el root por si acaso */
   padding: 0;
-  text-align: left; /* Para que el contenido no se centre solo */
+  /* Quitamos text-align: left forzado, dejamos que fluya natural */
 }
 
 .app-container {
@@ -10,4 +10,6 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden; /* Doble seguridad para evitar scroll horizontal */
+  position: relative;
 }

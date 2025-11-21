@@ -138,12 +138,119 @@
     border: 0;
 }
 
-/* Responsive */
-@media (max-width: 992px) {
-    .contact-grid {
-        grid-template-columns: 1fr; /* Una columna en tablet/móvil */
+/* =========================================
+   ESTILOS RESPONSIVE (CONTACTO)
+   ========================================= */
+
+/* 1. TABLET (IPADS / TABLETS - 601px a 1024px) */
+@media (max-width: 1024px) {
+    
+    .contacto-page {
+        padding-top: 70px;
     }
+
+    .contact-hero {
+        padding: 50px 0;
+    }
+
+    /* En Tablet apilamos: Info arriba, Mapa abajo */
+    .contact-grid {
+        grid-template-columns: 1fr; 
+        gap: 30px;
+        margin-bottom: 50px;
+        padding: 0 30px; /* Margen lateral */
+    }
+
+    /* La tarjeta de info ocupa todo el ancho */
+    .contact-info-card {
+        padding: 40px;
+    }
+
+    /* Mapa ancho y cómodo para tocar */
     .map-container {
-        height: 400px; /* Mapa más pequeño en móvil */
+        height: 400px; 
+        min-height: 400px;
+    }
+}
+
+/* 2. MÓVIL (CELULARES - Menos de 600px) */
+@media (max-width: 600px) {
+
+    /* --- HERO (ENCABEZADO) --- */
+    .contact-hero {
+        padding: 40px 0;
+        margin-bottom: 30px;
+    }
+
+    .contact-hero h1 {
+        font-size: 2rem; /* Título más pequeño */
+    }
+
+    .contact-hero p {
+        font-size: 1rem;
+        padding: 0 20px;
+    }
+
+    /* --- GRID PRINCIPAL --- */
+    .contact-grid {
+        grid-template-columns: 1fr; /* Una sola columna */
+        gap: 25px;
+        padding: 0 15px; /* Margen lateral reducido */
+        margin-bottom: 40px;
+    }
+
+    /* --- TARJETA DE INFORMACIÓN --- */
+    .contact-info-card {
+        padding: 25px 20px; /* Menos relleno interno */
+    }
+
+    .contact-info-card h2 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    /* Ajuste de los items (Icono + Texto) */
+    .info-item {
+        margin-bottom: 20px;
+    }
+
+    .info-icon {
+        font-size: 1.5rem; /* Icono un poco más chico */
+        margin-right: 15px;
+    }
+
+    .info-text h4 {
+        font-size: 1rem;
+    }
+
+    .info-text p {
+        font-size: 0.9rem;
+    }
+
+    /* --- BOTONES SOCIALES (OPTIMIZADOS PARA DEDO) --- */
+    .social-section {
+        margin-top: 25px;
+        padding-top: 25px;
+    }
+
+    .social-buttons {
+        /* En móvil, hacemos que los botones ocupen todo el ancho */
+        flex-direction: column; 
+        gap: 10px;
+    }
+
+    .btn-social {
+        justify-content: center; /* Texto centrado */
+        width: 100%; /* Botón de ancho completo */
+        padding: 14px 0; /* Más alto para tocar fácil */
+        font-size: 1rem;
+    }
+
+    /* --- MAPA --- */
+    .map-container {
+        /* Reducimos la altura en móvil para no ocupar 2 pantallas de scroll */
+        height: 300px; 
+        min-height: 300px;
+        border-radius: 8px;
     }
 }

@@ -1,127 +1,212 @@
-    .footer {
+/* --- FOOTER GENERAL (Base) --- */
+.footer {
     background-color: #fff;
-    padding: 60px 0 20px;
-    font-family: 'Inter', sans-serif; /* O la fuente que estés usando */
-    color: #666; /* Gris suave para textos */
-    }
+    padding: 80px 0 30px;
+    font-family: 'Inter', sans-serif;
+    color: #666;
+    border-top: 1px solid #f0f0f0;
+}
 
-    .footer-grid {
+.footer-grid {
     display: grid;
-    /* La primera columna es el doble de ancha que las demás */
+    /* Escritorio: Diseño clásico de 5 columnas */
     grid-template-columns: 2fr 1fr 1fr 1fr 1fr; 
     gap: 40px;
-    margin-bottom: 60px;
-    }
+    margin-bottom: 50px;
+    padding: 0 20px;
+}
 
-    /* --- COLUMNA DE MARCA (Izquierda) --- */
-    .footer-logo {
-    height: 60px;
-    margin-bottom: 20px;
-    display: block;
-    }
+/* --- COLUMNA DE MARCA (Brand) --- */
+.footer-brand-col {
+    padding-right: 20px; /* Aire a la derecha en escritorio */
+}
 
-    .footer-desc {
-    font-size: 0.85rem;
-    line-height: 1.6;
-    color: #777;
+.footer-logo {
+    height: 55px; /* Logo con buena presencia */
     margin-bottom: 25px;
-    max-width: 300px; /* Limitar ancho del texto para que se vea bloque */
-    text-align: justify; /* Justificado como en la imagen a veces se ve mejor */
-    }
+    display: block;
+    object-fit: contain;
+    /* Alineación izquierda por defecto */
+}
 
-    /* Iconos Sociales (Círculos Azules) */
-    .footer-social-icons {
+.footer-desc {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #555; /* Un poco más oscuro para mejor lectura */
+    margin-bottom: 30px;
+    max-width: 320px;
+    text-align: left; /* Siempre a la izquierda, es más legible */
+}
+
+/* REDES SOCIALES (Modernas) */
+.footer-social-icons {
     display: flex;
-    gap: 12px;
-    }
+    gap: 15px;
+    /* Alineación izquierda */
+    justify-content: flex-start; 
+}
 
-        .footer-social-icons a {
+.footer-social-icons a {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 35px;
-    height: 35px;
-    background-color: var(--color-primary); /* CAMBIO: ROJO desde el inicio */
-    color: #fff;
-    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: #f5f5f5; /* TENDENCIA: Fondo gris claro por defecto */
+    color: var(--color-primary); /* Icono rojo */
+    border-radius: 12px; /* TENDENCIA: Bordes redondeados suaves (Squircle) en vez de círculo perfecto */
+    font-size: 1.2rem;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.footer-social-icons a:hover {
+    background-color: var(--color-primary); /* Fondo Rojo al hover */
+    color: #fff; /* Icono blanco */
+    transform: translateY(-4px);
+    box-shadow: 0 5px 15px rgba(227, 28, 35, 0.3); /* Sombra roja suave (Glow) */
+}
+
+/* --- COLUMNAS DE ENLACES (Títulos y Links) --- */
+.footer-link-col h4 {
+    color: var(--color-secondary); /* Gris oscuro / Negro */
     font-size: 1rem;
-    transition: transform 0.3s ease, background-color 0.3s;
-    }
-
-    .footer-social-icons a:hover {
-    transform: translateY(-3px);
-    background-color: var(--color-primary); /* CAMBIO: AZUL al pasar el mouse */
-    }
-
-    /* --- COLUMNAS DE ENLACES --- */
-    .footer-link-col h4 {
-    color: #000; /* Títulos en negro o gris muy oscuro */
-    font-size: 1.1rem;
-    font-weight: 700;
+    font-weight: 800;
     margin-bottom: 25px;
-    }
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
 
-    .footer-link-col ul {
-    list-style: none;
+.footer-link-col ul {
     padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.footer-link-col li {
+    margin-bottom: 14px;
+}
+
+.footer-link-col a {
+    color: #666;
+    font-size: 0.95rem;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* Efecto Hover minimalista */
+.footer-link-col a:hover {
+    color: var(--color-corporate-blue);
+}
+
+.footer-link-col a::after {
+    /* Pequeña línea que aparece abajo al pasar el mouse */
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--color-corporate-blue);
+    transition: width 0.3s ease;
+}
+
+.footer-link-col a:hover::after {
+    width: 100%;
+}
+
+/* --- COPYRIGHT / BOTTOM --- */
+.footer-bottom {
+    border-top: 1px solid #e5e5e5;
+    padding-top: 30px;
+    text-align: center; /* El copyright sí se ve bien centrado */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.copyright-text {
+    font-size: 0.85rem;
+    color: #999;
+}
+
+/* =========================================
+   TENDENCIAS MODERNAS (RESPONSIVE)
+   ========================================= */
+
+/* --- SOLO TABLET (Entre 600px y 1024px) --- */
+@media (max-width: 1024px) {
+    .footer-grid {
+        /* Los enlaces se ordenarán en 2 columnas debajo del logo */
+        /* Esto hace que quede todo cuadrado y ordenado */
+        grid-template-columns: 1fr 1fr; 
+        gap: 40px;
     }
 
-    .footer-link-col li {
-    margin-bottom: 15px; /* Espaciado generoso entre links */
+    /* ESTO ES LO QUE PEDISTE: */
+    .footer-brand-col {
+        /* grid-column: 1 / -1 significa: "Ocupa desde el principio hasta el final" */
+        grid-column: 1 / -1; 
+        
+        /* Agregamos una línea divisoria suave para que se vea ordenado */
+        border-bottom: 1px solid #f0f0f0; 
+        padding-bottom: 25px;
+        margin-bottom: 10px;
+    }
+
+    .footer-desc {
+        /* Como ahora tiene todo el ancho, dejamos que el texto se estire */
+        max-width: 90%; 
+    }
+}
+
+/* 2. MÓVIL (Layout Compacto Estilo App) */
+@media (max-width: 600px) {
+    .footer {
+        padding: 50px 0 30px;
+        text-align: left; /* SIEMPRE A LA IZQUIERDA EN MÓVIL */
+    }
+
+    .footer-grid {
+        /* TENDENCIA: Grid de 2 columnas para los enlaces en celular */
+        /* Esto evita la lista larga y aprovecha el ancho */
+        grid-template-columns: 1fr 1fr; 
+        gap: 40px 20px;
+    }
+
+    /* La marca va arriba ocupando TODO el ancho (Header del footer) */
+    .footer-brand-col {
+        grid-column: 1 / -1; /* Span de borde a borde */
+        border-bottom: 1px solid #f0f0f0; /* Separación visual */
+        padding-bottom: 30px;
+        margin-bottom: 10px;
+    }
+
+    .footer-desc {
+        max-width: 100%;
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+    }
+    
+    /* Ajuste de iconos en móvil */
+    .footer-social-icons {
+        justify-content: flex-start; /* Alineados a la izquierda */
+    }
+    .footer-social-icons a {
+        width: 45px; /* Iconos más grandes para dedos (Touch friendly) */
+        height: 45px;
+    }
+
+    /* Títulos de enlaces en móvil */
+    .footer-link-col h4 {
+        font-size: 0.9rem;
+        color: var(--color-secondary); /* Destacamos título en Rojo */
+        margin-bottom: 15px;
     }
 
     .footer-link-col a {
-    color: #444; /* Gris oscuro para enlaces */
-    font-size: 0.9rem;
-    text-decoration: none;
-    transition: color 0.2s;
+        font-size: 0.85rem; /* Texto ligeramente más compacto */
+        display: block; /* Asegura zona de clic completa */
+        padding: 5px 0; /* Más espacio vertical para tocar */
     }
-
-    .footer-link-col a:hover {
-    color: var(--color-corporate-blue); /* Azul al pasar el mouse */
-    }
-
-    /* --- BARRA INFERIOR --- */
-    .footer-bottom {
-    /* Línea divisoria azul muy suave como en la imagen */
-    border-top: 1px solid #aebae2; 
-    padding-top: 30px;
-    text-align: center; /* Todo centrado */
-    }
-
-    .copyright-text {
-    font-size: 0.75rem; /* Texto pequeñito legal */
-    color: #888;
-    }
-
-    .copyright-text a {
-    color: #888;
-    text-decoration: underline;
-    margin: 0 2px;
-    }
-
-    .copyright-text a:hover {
-    color: var(--color-corporate-blue);
-    }
-
-    /* --- RESPONSIVE --- */
-    @media (max-width: 1024px) {
-    .footer-grid {
-        grid-template-columns: 1fr 1fr 1fr; /* 3 columnas en tablet */
-        gap: 30px;
-    }
-    .footer-brand-col {
-        grid-column: span 3; /* Logo ocupa todo el ancho arriba */
-        margin-bottom: 20px;
-    }
-    }
-
-    @media (max-width: 600px) {
-    .footer-grid {
-        grid-template-columns: 1fr; /* 1 columna en celular */
-        text-align: left;
-    }
-    .footer-brand-col {
-        grid-column: span 1;
-    }
-    }
+}

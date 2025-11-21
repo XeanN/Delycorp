@@ -122,20 +122,75 @@
     text-decoration: underline;
     }
 
-    /* Responsive */
-    @media (max-width: 992px) {
-    .news-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablets */
-    }
+    /* --- ESTILOS RESPONSIVE (Móvil y Tablet) --- */
+
+/* 1. TABLET (Hasta 1024px - iPads, Tablets grandes) */
+@media (max-width: 1024px) {
+    .news-section {
+        padding: 60px 0; /* Reducimos el aire vertical */
     }
 
-    @media (max-width: 600px) {
     .news-grid {
-        grid-template-columns: 1fr; /* 1 columna en celular */
+        /* En tablet usamos 2 columnas para que se lean bien */
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px; /* Un poco menos de espacio entre tarjetas */
+        padding: 0 20px; /* Margen lateral de seguridad */
     }
+
+    .section-header {
+        padding: 0 20px 15px; /* Ajuste del borde inferior */
+    }
+}
+
+/* 2. MÓVIL (Hasta 768px - Celulares) */
+@media (max-width: 768px) {
+    
+    .news-section {
+        padding: 40px 0; /* Más compacto en celular */
+    }
+
+    /* Cabecera de sección: Título arriba, enlace abajo */
     .section-header {
         flex-direction: column;
         align-items: flex-start;
         gap: 10px;
+        margin-bottom: 30px;
     }
+
+    .section-title {
+        font-size: 1.8rem; /* Título más pequeño para que no ocupe 3 líneas */
+        line-height: 1.2;
     }
+
+    /* Enlace "Ver todas" */
+    .view-all-link {
+        font-size: 0.9rem;
+        /* Opcional: darle un poco de margen extra si se siente pegado */
+        margin-top: 5px; 
+    }
+
+    /* Grid de 1 sola columna */
+    .news-grid {
+        grid-template-columns: 1fr; /* Una tarjeta debajo de otra */
+        gap: 25px;
+        padding: 0 15px; /* Margen para que no toque los bordes de la pantalla */
+    }
+
+    /* Ajustes de la tarjeta individual */
+    .news-card {
+        /* En móvil, a veces la sombra muy difusa se ve sucia, la ajustamos */
+        box-shadow: 0 3px 10px rgba(0,0,0,0.08); 
+    }
+
+    .news-image {
+        height: 180px; /* Imagen un poco menos alta en celular */
+    }
+
+    .news-content {
+        padding: 20px; /* Menos relleno interno para dar más espacio al texto */
+    }
+
+    .news-content h3 {
+        font-size: 1.1rem; /* Título de la noticia ajustado */
+    }
+}
