@@ -187,7 +187,7 @@
     // ==============================================
     // 4. CUIDADO DE HOGAR (3 Productos)
     // ==============================================
-    {
+    {   
         id: 401, name: "Detergente Huracán Limón", category: "cuidado-de-hogar", subcategory: "Detergentes", brand: "Huracán",
         presentation: "Saco x 15 KG", unit_weight: "15 KG", code: "DET-0002",
         img_primary: getAssetUrl('cuidado-de-hogar/detergente-huracan-limon.png'), img_secondary: getAssetUrl('cuidado-de-hogar/detergente-huracan-limon-2.png'),

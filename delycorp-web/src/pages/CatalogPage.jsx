@@ -40,9 +40,18 @@
         } 
         // CASO B: VISTA POR MARCA (ej: /marca/deyelli)
         else if (brandSlug) {
-        // Normalizamos para comparar (D'loe -> dloe)
-        const cleanSlug = (str) => str.toLowerCase().replace(/[^a-z0-9]/g, '');
-        
+    
+        const cleanSlug = (str) => {
+            if (!str) return '';
+            return str
+                .toLowerCase()
+                .normalize("NFD")                
+                .replace(/[\u0300-\u036f]/g, "") 
+                .replace(/[^a-z0-9]/g, '');      
+        };
+        // ------------------------------------
+
+        // Ahora sí comparamos manzanas con manzanas
         data = allProducts.filter(p => cleanSlug(p.brand) === cleanSlug(brandSlug));
         
         // Título bonito (tomamos el nombre real del primer producto encontrado)
