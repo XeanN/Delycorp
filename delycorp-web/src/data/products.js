@@ -41,7 +41,6 @@
     { id: 116, name: "Bolimix", category: "dulces", subcategory: "Chicles", brand: "Deyelli", presentation: "Frasco x 125 Unidades", unit_weight: "8 Gramos", code: "CHI-016", img_primary: getAssetUrl('dulces/bolimix.png'), img_secondary: getAssetUrl('dulces/bolimix-2.png') },
     { id: 117, name: "Chicle Jirafa (31 CM)", category: "dulces", subcategory: "Chicles", brand: "Deyelli", presentation: "Display x 60 Unidades", unit_weight: "12 gramos", code: "CHI-015", img_primary: getAssetUrl('dulces/chicle-jirafa-31cm.png'), img_secondary: getAssetUrl('dulces/chicle-jirafa-31cm-2.png') },
     { id: 118, name: "Chicle en Polvo", category: "dulces", subcategory: "Chicles", brand: "Deyelli", presentation: "Display x 30 Unidades", unit_weight: "8 gramos", code: "CHI-010", img_primary: getAssetUrl('dulces/chicle-en-polvo.png'), img_secondary: getAssetUrl('dulces/chicle-en-polvo-2.png') },
-    { id: 119, name: "Chicle Balón Volador", category: "dulces", subcategory: "Chicles Juguete", brand: "Deyelli", presentation: "Display x 30 Unidades", unit_weight: "6 gr", code: "CHI-016", img_primary: getAssetUrl('dulces/chicle-balon-volador.png'), img_secondary: getAssetUrl('dulces/chicle-balon-volador-2.png') },
 
     // --- Mini Gelatinas (Deyelli) ---
     { id: 120, name: "Mini Gelatina Tren", category: "dulces", subcategory: "Mini Gelatinas", brand: "Deyelli", presentation: "Frasco x 100 Unidades", unit_weight: "15 Gramos", code: "GELA-006", img_primary: getAssetUrl('dulces/mini-gelatina-tren.png'), img_secondary: getAssetUrl('dulces/mini-gelatina-tren-2.png') },
@@ -96,6 +95,48 @@
     { id: 157, name: "Malvavisco Angelito (Mix 500g)", category: "dulces", subcategory: "Malvaviscos", brand: "Deyelli", presentation: "Bolsa x 500 g", unit_weight: "500 g", code: "MALV-0008", img_primary: getAssetUrl('dulces/malvavisco-angelito-mix-500g.png'), img_secondary: getAssetUrl('dulces/malvavisco-angelito-mix-500g-2.png') },
     { id: 158, name: "Malvavisco Bongy (50 UNDS)", category: "dulces", subcategory: "Malvaviscos", brand: "Deyelli", presentation: "Bolsa x 50 Unidades", unit_weight: "5 gramos", code: "MALV-0005", img_primary: getAssetUrl('dulces/malvavisco-bongy-50.png'), img_secondary: getAssetUrl('dulces/malvavisco-bongy-50-2.png') },
     
+    // --- Galletas (NUEVO) ---
+    { id: 159, name: "Mini Galleta Tonazo Fresa", category: "dulces", subcategory: "Galletas", brand: "Tonazo", presentation: "Bolsa x 50 Unidades", unit_weight: "10 gr", code: "GA-001", img_primary: getAssetUrl('dulces/mini-galleta-tonazo-fresa.png'), img_secondary: getAssetUrl('dulces/mini-galleta-tonazo-fresa-2.png') },
+    { id: 160, name: "Mini Galleta Tonazo Vainilla", category: "dulces", subcategory: "Galletas", brand: "Tonazo", presentation: "Bolsa x 50 Unidades", unit_weight: "10 gr", code: "GA-003", img_primary: getAssetUrl('dulces/mini-galleta-tonazo-vainilla.png'), img_secondary: getAssetUrl('dulces/mini-galleta-tonazo-vainilla-2.png') },
+    { id: 161, name: "Mini Galleta Tonazo Chocolate", category: "dulces", subcategory: "Galletas", brand: "Tonazo", presentation: "Bolsa x 50 Unidades", unit_weight: "10 gr", code: "GA-002", img_primary: getAssetUrl('dulces/mini-galleta-tonazo-chocolate.png'), img_secondary: getAssetUrl('dulces/mini-galleta-tonazo-chocolate-2.png') },
+    { id: 162, name: "Yumi Chock", category: "dulces", subcategory: "Galletas", brand: "Deyelli", presentation: "Display x 10 Unidades", unit_weight: "15 Gramos", code: "MG-001", img_primary: getAssetUrl('dulces/yumi-chock.png'), img_secondary: getAssetUrl('dulces/yumi-chock-2.png') },
+
+    // --- Gomitas (NUEVO) ---
+    { id: 163, name: "Gomitas Culebritas", category: "dulces", subcategory: "Gomitas", brand: "Guandy", presentation: "Tira x 24 Unidades", unit_weight: "20 gramos", code: "GOMI-004", img_primary: getAssetUrl('dulces/gomitas-culebritas.png'), img_secondary: getAssetUrl('dulces/gomitas-culebritas-2.png') },
+    { id: 164, name: "Gomitas Banana Banana", category: "dulces", subcategory: "Gomitas", brand: "Guandy", presentation: "Tira x 24 Unidades", unit_weight: "20 gramos", code: "GOMI-003", img_primary: getAssetUrl('dulces/gomitas-banana-banana.png'), img_secondary: getAssetUrl('dulces/gomitas-banana-banana-2.png') },
+    { id: 165, name: "Batalla Goko (con Juguete)", category: "dulces", subcategory: "Gomitas Juguete", brand: "Deyelli", presentation: "Display x 30 Unidades", unit_weight: "6 gramos", code: "GOMI-002", img_primary: getAssetUrl('dulces/batalla-goko.png'), img_secondary: getAssetUrl('dulces/batalla-goko-2.png') },
+    { id: 166, name: "Frie Tu Huevo XL", category: "dulces", subcategory: "Gomitas Juguete", brand: "Deyelli", presentation: "Display x 20 Unidades", unit_weight: "25 gramos", code: "GOMI-001", img_primary: getAssetUrl('dulces/frie-tu-huevo-xl.png'), img_secondary: getAssetUrl('dulces/frie-tu-huevo-xl-2.png') },
+    { id: 167, name: "Frie Tu Huevito", category: "dulces", subcategory: "Gomitas Juguete", brand: "Deyelli", presentation: "Display x 30 Unidades", unit_weight: "16 gramos", code: "GOMI-005", img_primary: getAssetUrl('dulces/frie-tu-huevito.png'), img_secondary: getAssetUrl('dulces/frie-tu-huevito-2.png') },
+    { id: 168, name: "Gomitas Gummy Lunch", category: "dulces", subcategory: "Gomitas", brand: "Deyelli", presentation: "Display x 30 Unidades", unit_weight: "10 gramos", code: "G-53019", img_primary: getAssetUrl('dulces/gomitas-gummy-lunch.png'), img_secondary: getAssetUrl('dulces/gomitas-gummy-lunch-2.png') },
+    { id: 169, name: "Gomitas Corazones Sweet Heart", category: "dulces", subcategory: "Gomitas", brand: "Guandy", presentation: "Tira x 24 Unidades", unit_weight: "20 Gramos", code: "GOMI-016", img_primary: getAssetUrl('dulces/gomitas-corazones-sweet-heart.png'), img_secondary: getAssetUrl('dulces/gomitas-corazones-sweet-heart-2.png') },
+    { id: 170, name: "Gomitas Sour Watermelon", category: "dulces", subcategory: "Gomitas", brand: "Guandy", presentation: "Tira x 24 Unidades", unit_weight: "20 Gramos", code: "GOMI-017", img_primary: getAssetUrl('dulces/gomitas-sour-watermelon.png'), img_secondary: getAssetUrl('dulces/gomitas-sour-watermelon-2.png') },
+    { id: 171, name: "Gomitas Ositos Sour Bear", category: "dulces", subcategory: "Gomitas", brand: "Guandy", presentation: "Tira x 24 Unidades", unit_weight: "20 Gramos", code: "GOMI-018", img_primary: getAssetUrl('dulces/gomitas-ositos-sour-bear.png'), img_secondary: getAssetUrl('dulces/gomitas-ositos-sour-bear-2.png') },
+    { id: 172, name: "Gomitas Chatarrita (Gomi Blox)", category: "dulces", subcategory: "Gomitas Juguete", brand: "Deyelli", presentation: "Display x 30 Unidades", unit_weight: "8.5 gr", code: "GOMI-010", img_primary: getAssetUrl('dulces/gomitas-chatarrita-gomi-blox.png'), img_secondary: getAssetUrl('dulces/gomitas-chatarrita-gomi-blox-2.png') },
+
+    // --- Gomitas Ácidas Damla (NUEVO) ---
+    { id: 173, name: "Damla Sour Belts Tropical XL", category: "dulces", subcategory: "Gomitas Ácidas", brand: "Damla", presentation: "Display x 72 Unidades", unit_weight: "15 Gramos", code: "G-53018", img_primary: getAssetUrl('dulces/damla-sour-belts-tropical-xl.png'), img_secondary: getAssetUrl('dulces/damla-sour-belts-tropical-xl-2.png') },
+    { id: 174, name: "Damla Sour Tubes Tropical", category: "dulces", subcategory: "Gomitas Ácidas", brand: "Damla", presentation: "Display x 24 Unidades", unit_weight: "30 Gramos", code: "G-53014", img_primary: getAssetUrl('dulces/damla-sour-tubes-tropical.png'), img_secondary: getAssetUrl('dulces/damla-sour-tubes-tropical-2.png') },
+    { id: 175, name: "Damla Sour Tubes Mora Frambuesa", category: "dulces", subcategory: "Gomitas Ácidas", brand: "Damla", presentation: "Display x 24 Unidades", unit_weight: "30 Gramos", code: "G-53011", img_primary: getAssetUrl('dulces/damla-sour-tubes-mora-frambuesa.png'), img_secondary: getAssetUrl('dulces/damla-sour-tubes-mora-frambuesa-2.png') },
+    { id: 176, name: "Damla Sour Tubes Frutas", category: "dulces", subcategory: "Gomitas Ácidas", brand: "Damla", presentation: "Display x 24 Unidades", unit_weight: "30 Gramos", code: "G-53017", img_primary: getAssetUrl('dulces/damla-sour-tubes-frutas.png'), img_secondary: getAssetUrl('dulces/damla-sour-tubes-frutas-2.png') },
+    { id: 177, name: "Damla Sour Tubes Manzana", category: "dulces", subcategory: "Gomitas Ácidas", brand: "Damla", presentation: "Display x 24 Unidades", unit_weight: "30 Gramos", code: "G-53016", img_primary: getAssetUrl('dulces/damla-sour-tubes-manzana.png'), img_secondary: getAssetUrl('dulces/damla-sour-tubes-manzana-2.png') },
+    { id: 178, name: "Damla Sour Tubes Fresa", category: "dulces", subcategory: "Gomitas Ácidas", brand: "Damla", presentation: "Display x 24 Unidades", unit_weight: "30 Gramos", code: "G-53012", img_primary: getAssetUrl('dulces/damla-sour-tubes-fresa.png'), img_secondary: getAssetUrl('dulces/damla-sour-tubes-fresa-2.png') },
+
+    // --- Malvaviscos (NUEVO) ---
+    { id: 179, name: "Malvavisco Twister Celeste", category: "dulces", subcategory: "Malvaviscos", brand: "Angelito", presentation: "Bolsa x 200 gramos", unit_weight: "200 gramos", code: "MALV-0002", img_primary: getAssetUrl('dulces/malvavisco-twister-celeste.png'), img_secondary: getAssetUrl('dulces/malvavisco-twister-celeste-2.png') },
+    { id: 180, name: "Malvavisco Twister Fresa", category: "dulces", subcategory: "Malvaviscos", brand: "Angelito", presentation: "Bolsa x 200 gramos", unit_weight: "200 gramos", code: "MALV-0001", img_primary: getAssetUrl('dulces/malvavisco-twister-fresa.png'), img_secondary: getAssetUrl('dulces/malvavisco-twister-fresa-2.png') },
+    { id: 181, name: "Malvavisco Twister Frutas", category: "dulces", subcategory: "Malvaviscos", brand: "Angelito", presentation: "Bolsa x 200 gramos", unit_weight: "200 gramos", code: "MALV-0003", img_primary: getAssetUrl('dulces/malvavisco-twister-frutas.png'), img_secondary: getAssetUrl('dulces/malvavisco-twister-frutas-2.png') },
+    { id: 182, name: "Malvavisco Mini Mini", category: "dulces", subcategory: "Malvaviscos", brand: "Angelito", presentation: "Tira x 12 Unidades", unit_weight: "40 gramos", code: "MALV-0004", img_primary: getAssetUrl('dulces/malvavisco-mini-mini.png'), img_secondary: getAssetUrl('dulces/malvavisco-mini-mini-2.png') },
+    { id: 183, name: "Malvavisco Chocomanchas", category: "dulces", subcategory: "Malvaviscos", brand: "Deyelli", presentation: "Tira x 12 Unidades", unit_weight: "26 gramos", code: "MALV-0006", img_primary: getAssetUrl('dulces/malvavisco-chocomanchas.png'), img_secondary: getAssetUrl('dulces/malvavisco-chocomanchas-2.png') },
+    { id: 184, name: "Marshmellosos", category: "dulces", subcategory: "Malvaviscos", brand: "Deyelli", presentation: "Bolsa x 50 Unidades", unit_weight: "5 Gramos", code: "MALV-0011", img_primary: getAssetUrl('dulces/marshmellosos.png'), img_secondary: getAssetUrl('dulces/marshmellosos-2.png') },
+
+    // --- Chicles (NUEVO) ---
+    { id: 185, name: "Bolichicle Boli Mix", category: "dulces", subcategory: "Chicles", brand: "Deyelli", presentation: "Display x 100 Unidades", unit_weight: "8 gr", code: "CHI-018", img_primary: getAssetUrl('dulces/bolichicle-boli-mix.png'), img_secondary: getAssetUrl('dulces/bolichicle-boli-mix-2.png') },
+    { id: 186, name: "Dino Huevitos", category: "dulces", subcategory: "Chicles", brand: "Deyelli", presentation: "Display x 30 Unidades", unit_weight: "20 Gramos", code: "G-61004", img_primary: getAssetUrl('dulces/dino-huevitos.png'), img_secondary: getAssetUrl('dulces/dino-huevitos-2.png') },
+
+    // --- Piñatería (NUEVO) ---
+    { id: 187, name: "Piñatón Deyelli", category: "dulces", subcategory: "Piñatería", brand: "Deyelli", presentation: "Bolsa x 100 Piezas", unit_weight: "1 Kg", code: "PC-001", img_primary: getAssetUrl('dulces/pinaton-deyelli.png'), img_secondary: getAssetUrl('dulces/pinaton-deyelli-2.png') },
+    { id: 188, name: "Piñatero Deyelli", category: "dulces", subcategory: "Piñatería", brand: "Deyelli", presentation: "Bolsa x 100 Piezas", unit_weight: "1 Kg", code: "PC-006", img_primary: getAssetUrl('dulces/pinatero-deyelli.png'), img_secondary: getAssetUrl('dulces/pinatero-deyelli-2.png') },
+    
     // ==============================================
     // 2. CHOCOLATERÍA (36 Productos)
     // ==============================================
@@ -137,11 +178,11 @@
     // ==============================================
     // 3. BEBIDAS (1 Producto)
     // ==============================================
-    {
-        id: 301, name: "Bebida Aloe Vera D'Loe", category: "bebidas", subcategory: "Aloe Vera", brand: "D'Loe",
-        presentation: "Caja x 24 Botellas", unit_weight: "500 ml", code: "DYL-0001",
-        img_primary: getAssetUrl('bebidas/bebida-aloe-vera-dloe.png'), img_secondary: getAssetUrl('bebidas/bebida-aloe-vera-dloe-2.png'),
-    },
+    {id: 301, name: "Bebida Aloe Vera D'Loe", category: "bebidas", subcategory: "Aloe Vera", brand: "D'Loe", presentation: "Caja x 24 Botellas", unit_weight: "500 ml", code: "DYL-0001", img_primary: getAssetUrl('bebidas/bebida-aloe-vera-dloe.png'), img_secondary: getAssetUrl('bebidas/bebida-aloe-vera-dloe-2.png'),},
+    { id: 302, name: "Bebida Aloe Vera Piña", category: "bebidas", subcategory: "Aloe Vera", brand: "D'Loe", presentation: "Caja x 24 Botellas", unit_weight: "500 ml", code: "DYL-0002", img_primary: getAssetUrl('bebidas/bebida-aloe-vera-pina.png'), img_secondary: getAssetUrl('bebidas/bebida-aloe-vera-pina-2.png') },
+    { id: 303, name: "Bebida Aloe Vera Arándano", category: "bebidas", subcategory: "Aloe Vera", brand: "D'Loe", presentation: "Caja x 24 Botellas", unit_weight: "500 ml", code: "DYL-0003", img_primary: getAssetUrl('bebidas/bebida-aloe-vera-arandano.png'), img_secondary: getAssetUrl('bebidas/bebida-aloe-vera-arandano-2.png') },
+    { id: 304, name: "Bebida Aloe Vera Fresa", category: "bebidas", subcategory: "Aloe Vera", brand: "D'Loe", presentation: "Caja x 24 Botellas", unit_weight: "500 ml", code: "DYL-0004", img_primary: getAssetUrl('bebidas/bebida-aloe-vera-fresa.png'), img_secondary: getAssetUrl('bebidas/bebida-aloe-vera-fresa-2.png') },
+    { id: 305, name: "Bebida Aloe Vera Coco", category: "bebidas", subcategory: "Aloe Vera", brand: "D'Loe", presentation: "Caja x 24 Botellas", unit_weight: "500 ml", code: "DYL-0005", img_primary: getAssetUrl('bebidas/bebida-aloe-vera-coco.png'), img_secondary: getAssetUrl('bebidas/bebida-aloe-vera-coco-2.png') },
 
     // ==============================================
     // 4. CUIDADO DE HOGAR (3 Productos)
