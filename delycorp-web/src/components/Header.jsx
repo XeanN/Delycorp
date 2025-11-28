@@ -95,7 +95,7 @@ const Header = () => {
         <header className={`header ${isScrolled ? 'scrolled' : ''}`} ref={menuRef}>
         <div className="container header-grid">
             <div className="header-logo">
-            <Link to="/"><img src={getAssetUrl('logo.png')} alt="Delycorp" /></Link>
+            <Link to="/"><img src={getAssetUrl('LogoDiapositiva.png')} alt="Delycorp" /></Link>
             </div>
 
             <div className="header-content">
