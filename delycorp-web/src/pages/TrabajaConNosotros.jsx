@@ -6,12 +6,6 @@
     const TrabajaConNosotros = () => {
     return (
         <div className="trabaja-page">
-        
-        {/* Breadcrumb */}
-        <div className="breadcrumb-bar container">
-            <Link to="/" className="breadcrumb-link">Inicio</Link> <FaChevronRight className="breadcrumb-arrow" /> 
-            <span className="breadcrumb-current">Trabaja con Nosotros</span>
-        </div>
 
         {/* 1. HERO BANNER */}
         <section className="work-hero">
@@ -20,6 +14,12 @@
             <p>Buscamos talento apasionado que quiera crecer con nosotros.</p>
             </div>
         </section>
+
+        {/* Breadcrumb */}
+        <div className="breadcrumb-bar container">
+            <Link to="/" className="breadcrumb-link">Inicio</Link> <FaChevronRight className="breadcrumb-arrow" /> 
+            <span className="breadcrumb-current">Trabaja con Nosotros</span>
+        </div>
 
         <div className="container">
             

@@ -13,3 +13,19 @@
   overflow-x: hidden; /* Doble seguridad para evitar scroll horizontal */
   position: relative;
 }
+.breadcrumb-bar {
+    margin-top: 5px; 
+    margin-bottom: 5px;
+    padding: 10px 0; /* Mantenemos el padding que ya tenías */
+}
+
+/* OPCIONAL: Ajuste para celulares (Responsive) */
+@media (max-width: 1008px) {
+    .breadcrumb-bar {
+    padding: 10px 0; 
+    margin-bottom: 20px;
+    margin-top: 0;
+    font-size: 0.95rem;
+    color: #666;
+    } 
+}

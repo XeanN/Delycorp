@@ -7,11 +7,6 @@
     return (
         <div className="contacto-page">
         
-        {/* Breadcrumb */}
-        <div className="breadcrumb-bar container">
-            <Link to="/" className="breadcrumb-link">Inicio</Link> <FaChevronRight className="breadcrumb-arrow" /> 
-            <span className="breadcrumb-current">Contáctanos</span>
-        </div>
 
         {/* 1. HERO BANNER */}
         <section className="contact-hero">
@@ -20,6 +15,12 @@
                 <p>Ponte en contacto con nosotros para cualquier consulta o solicitud.</p>
             </div>
         </section>
+        
+        {/* Breadcrumb */}
+        <div className="breadcrumb-bar container">
+            <Link to="/" className="breadcrumb-link">Inicio</Link> <FaChevronRight className="breadcrumb-arrow" /> 
+            <span className="breadcrumb-current">Contáctanos</span>
+        </div>
 
         <div className="container">
             <div className="contact-grid">

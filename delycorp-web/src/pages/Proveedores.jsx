@@ -7,11 +7,6 @@
     return (
         <div className="proveedores-page">
         
-        {/* Breadcrumb */}
-        <div className="breadcrumb-bar container">
-            <Link to="/" className="breadcrumb-link">Inicio</Link> <FaChevronRight className="breadcrumb-arrow" /> 
-            <span className="breadcrumb-current">Proveedores</span>
-        </div>
 
         {/* 1. HERO BANNER */}
         <section className="providers-hero">
@@ -20,6 +15,12 @@
             <p>Construimos relaciones sólidas para llevar calidad a todo el Perú.</p>
             </div>
         </section>
+        
+        {/* Breadcrumb */}
+        <div className="breadcrumb-bar container">
+            <Link to="/" className="breadcrumb-link">Inicio</Link> <FaChevronRight className="breadcrumb-arrow" /> 
+            <span className="breadcrumb-current">Proveedores</span>
+        </div>
 
         {/* 2. INTRODUCCIÓN */}
         <div className="container">
