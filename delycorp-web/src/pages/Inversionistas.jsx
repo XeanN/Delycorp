@@ -6,12 +6,6 @@
     const Inversionistas = () => {
     return (
         <div className="inversionistas-page">
-        
-        {/* Breadcrumb */}
-        <div className="breadcrumb-bar container">
-            <Link to="/" className="breadcrumb-link">Inicio</Link> <FaChevronRight className="breadcrumb-arrow" /> 
-            <span className="breadcrumb-current">Inversionistas</span>
-        </div>
 
         {/* 1. HERO BANNER */}
         <section className="investor-hero">
@@ -20,6 +14,12 @@
             <p>Transparencia, solidez y crecimiento sostenible en el mercado de consumo masivo.</p>
             </div>
         </section>
+
+        {/* Breadcrumb */}
+        <div className="breadcrumb-bar container">
+            <Link to="/" className="breadcrumb-link">Inicio</Link> <FaChevronRight className="breadcrumb-arrow" /> 
+            <span className="breadcrumb-current">Inversionistas</span>
+        </div>
 
         <div className="container">
             

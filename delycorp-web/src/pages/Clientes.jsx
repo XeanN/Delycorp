@@ -1,17 +1,18 @@
     import React from 'react';
     import { Link } from 'react-router-dom';
-    import { FaChevronRight, FaChartLine, FaHandHoldingHeart, FaBoxOpen } from 'react-icons/fa';
+    import { FaChevronRight, FaChartLine, FaHandHoldingHeart, FaBoxOpen, FaStar } from 'react-icons/fa';
     import './Clientes.css';
 
     const Clientes = () => {
+
+        const clientesFelices = [
+        { id: 1,  img: "Cliente_1.jpg" },
+        { id: 2,  img: "Cliente_2.jpg" },
+
+    ];
     return (
         <div className="clientes-page">
         
-        {/* Breadcrumb */}
-        <div className="breadcrumb-bar container">
-            <Link to="/" className="breadcrumb-link">Inicio</Link> <FaChevronRight className="breadcrumb-arrow" /> 
-            <span className="breadcrumb-current">Clientes</span>
-        </div>
 
         {/* 1. HERO BANNER */}
         <section className="clients-hero">
@@ -20,6 +21,12 @@
             <p>Aliados estratégicos para el crecimiento de tu negocio.</p>
             </div>
         </section>
+
+        {/* Breadcrumb */}
+        <div className="breadcrumb-bar container">
+            <Link to="/" className="breadcrumb-link">Inicio</Link> <FaChevronRight className="breadcrumb-arrow" /> 
+            <span className="breadcrumb-current">Clientes</span>
+        </div>
 
         {/* 2. CÓMO TRABAJAMOS (INTRODUCCIÓN) */}
         <div className="container">
@@ -101,6 +108,30 @@
                 </div>
             </div>
         </section>
+
+        {/* --- 5. GALERÍA DE CLIENTES FELICES --- */}
+            <section className="happy-clients-section">
+                <div className="container">
+                    <div className="section-header">
+                        <h2>CLIENTES FELICES</h2>
+                        <p>Negocios que crecen día a día junto a nosotros.</p>
+                    </div>
+
+                    <div className="gallery-grid">
+                        {clientesFelices.map((cliente) => (
+                            <div key={cliente.id} className="gallery-item">
+                                <img src={cliente.img} alt={`Cliente feliz ${cliente.nombre}`} />
+                                <div className="gallery-overlay">
+                                    <span>{cliente.nombre}</span>
+                                    <div className="stars">
+                                        <FaStar/><FaStar/><FaStar/><FaStar/><FaStar/>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
 
         </div>
     );

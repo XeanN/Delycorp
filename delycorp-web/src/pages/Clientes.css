@@ -6,9 +6,9 @@
 
 /* --- 1. HERO BANNER --- */
 .clients-hero {
-    height: 350px;
+    height: 370px;
     /* Imagen de tienda/comercio o trato comercial */
-    background-image: url('https://images.unsplash.com/photo-1556740738-b6a63e27c4df?q=80&w=1200&auto=format&fit=crop');
+    background-image: url('clientes.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -24,7 +24,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 59, 113, 0.85); /* Azul corporativo */
+    background: rgba(43, 47, 58, 0.701); /* Azul corporativo */
 }
 
 .clients-hero-content {
@@ -48,7 +48,7 @@
 
 /* --- 2. CÓMO TRABAJAMOS (INTRO) --- */
 .clients-intro-section {
-    padding: 80px 0;
+    padding: 30px 0;
     text-align: center;
 }
 
@@ -274,5 +274,121 @@
         height: auto;
         max-height: 250px; /* Imagen controlada */
         width: 100%;
+    }
+}
+
+/* =========================================
+   5. SECCIÓN CLIENTES FELICES (GALERÍA)
+   ========================================= */
+.happy-clients-section {
+    padding: 80px 0 100px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.section-header h2 {
+    color: var(--color-corporate-blue, #2b2f3a); /* Usa tu variable o el hex */
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.section-header p {
+    color: #666;
+    margin-bottom: 50px;
+    font-size: 1.1rem;
+}
+
+/* La Cuadrícula de Fotos */
+.gallery-grid {
+    display: grid;
+    /* Esto es magia: crea columnas automáticas de mínimo 250px */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 20px;
+}
+
+/* Tarjeta individual de foto */
+.gallery-item {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    /*height: 300px; /* Altura fija para uniformidad */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la foto llene el espacio sin deformarse */
+    transition: transform 0.5s ease;
+}
+
+/* Efecto Hover: Zoom en la imagen */
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Capa oscura con texto (Overlay) */
+.gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    color: white;
+    transform: translateY(100%); /* Oculto inicialmente (opcional) o visible siempre */
+    transform: translateY(0); /* Lo dejamos visible para que se lea siempre */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+.gallery-overlay span {
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.gallery-overlay .stars {
+    color: #ffd700; /* Color dorado */
+    font-size: 0.9rem;
+    margin-top: 5px;
+    display: flex;
+    gap: 3px;
+}
+
+/* =========================================
+   RESPONSIVE PARA LA GALERÍA
+   ========================================= */
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .happy-clients-section {
+        padding: 60px 0;
+    }
+    
+    .gallery-item {
+        height: 250px; /* Un poco más bajas en tablet */
+    }
+}
+
+/* Móvil */
+@media (max-width: 600px) {
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .gallery-grid {
+        /* En móvil forzamos 1 columna o dejamos el auto-fit que ya funciona bien, 
+           pero vamos a ajustar el padding */
+        padding: 0 20px;
+        gap: 15px;
+    }
+
+    .gallery-item {
+        height: 220px; /* Altura ideal para celular */
     }
 }

@@ -11,7 +11,7 @@ const HeroSlider = () => {
     const slides = [
         {
             id: 1,
-            image: getAssetUrl("BANNER_3.png"),
+            image: getAssetUrl("s_Distribución.jpg"),
             title: "Excelencia en Distribución",
             subtitle: "Llevamos calidad a cada rincón del Perú.",
             link: "/nosotros", // <--- Este botón llevará a "Nosotros"
@@ -19,7 +19,7 @@ const HeroSlider = () => {
         },
         {
             id: 2,
-            image: getAssetUrl("BANNER_2.png"),
+            image: getAssetUrl("s_Marcas.jpg"),
             title: "Nuestras Marcas",
             subtitle: "Representamos a las mejores marcas del mercado.",
             link: "/productos", // <--- Este botón llevará a "Productos"
@@ -27,7 +27,7 @@ const HeroSlider = () => {
         },
         {
             id: 3,
-            image: getAssetUrl("BANNER_1.png"),
+            image: getAssetUrl("s_Compromiso.jpg"),
             title: "Compromiso y Pasión",
             subtitle: "Un equipo dedicado a servirte mejor.",
             link: "/trabaja", // <--- Este botón llevará a "Trabaja con Nosotros"
