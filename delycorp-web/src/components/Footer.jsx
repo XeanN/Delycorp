@@ -9,7 +9,7 @@
         <footer className="footer">
         <div className="container">
             
-            {/* SECCIÓN SUPERIOR: GRID DE 5 COLUMNAS */}
+            {/* GRID DE COLUMNAS (Ahora son 4 para un diseño más limpio) */}
             <div className="footer-grid">
             
             {/* COLUMNA 1: MARCA + DESCRIPCIÓN + SOCIALES */}
@@ -20,12 +20,12 @@
                 Sustentada en una marca sombrilla fuerte, marcas reconocidas y de alto valor percibido.
                 </p>
                 
-                {/* Iconos sociales azules a la izquierda */}
+                {/* Iconos sociales */}
                 <div className="footer-social-icons">
-                <a href="https://facebook.com" aria-label="Facebook"><FaFacebookF /></a>
-                <a href="https://linkedin.com" aria-label="LinkedIn"><FaLinkedinIn /></a>
-                <a href="https://instagram.com" aria-label="Instagram"><FaInstagram /></a>
-                <a href="https://youtube.com" aria-label="YouTube"><FaYoutube /></a>
+                <a href="https://facebook.com" aria-label="Facebook" target="_blank" rel="noreferrer"><FaFacebookF /></a>
+                <a href="https://linkedin.com" aria-label="LinkedIn" target="_blank" rel="noreferrer"><FaLinkedinIn /></a>
+                <a href="https://instagram.com" aria-label="Instagram" target="_blank" rel="noreferrer"><FaInstagram /></a>
+                <a href="https://youtube.com" aria-label="YouTube" target="_blank" rel="noreferrer"><FaYoutube /></a>
                 </div>
             </div>
 
@@ -39,23 +39,12 @@
                 </ul>
             </div>  
 
-            {/* COLUMNA 3: SOSTENIBILIDAD */}
+            {/* COLUMNA 3: ENLACES IMPORTANTES (Aquí movimos Sostenibilidad) */}
             <div className="footer-link-col">
-                <h4>Sostenibilidad</h4>
+                <h4>Enlaces Rápidos</h4>
                 <ul>
-                <li><Link to="/destacados">Destacados</Link></li>
-                <li><Link to="/estrategia">Estrategia</Link></li>
-                <li><Link to="/gestion-sostenibilidad">Gestión de Sostenibilidad</Link></li>
-                <li><Link to="/resultados">Resultados</Link></li>
-                <li><Link to="/reportes">Reportes</Link></li>
-                <li><Link to="/fundacion">Fundación Delycorp</Link></li>
-                </ul>
-            </div>
-
-            {/* COLUMNA 4: OTROS ENLACES */}
-            <div className="footer-link-col">
-                <h4>Otros enlaces</h4>
-                <ul>
+                {/* Nuevo enlace directo */}
+                <li><Link to="/sostenibilidad">Sostenibilidad</Link></li>
                 <li><Link to="/noticias">Noticias</Link></li>
                 <li><Link to="/inversionistas">Inversionistas</Link></li>
                 <li><Link to="/proveedores">Proveedores</Link></li>
@@ -63,7 +52,7 @@
                 </ul>
             </div>
 
-            {/* COLUMNA 5: CONTACTO */}
+            {/* COLUMNA 4: CONTACTO */}
             <div className="footer-link-col">
                 <h4>Contacto</h4>
                 <ul>

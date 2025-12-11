@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { FaSearch, FaRegUser, FaChevronDown, FaChevronUp, FaBars, FaTimes } from 'react-icons/fa';
-import { getAssetUrl } from '../utils/assets'; // 1. Importar
+import { getAssetUrl } from '../utils/assets'; 
 import './Header.css';
 
 const Header = () => {
@@ -19,10 +19,10 @@ const Header = () => {
     const createSlug = (text) => {
         return text
         .toLowerCase()
-        .normalize("NFD") // Separa tildes
-        .replace(/[\u0300-\u036f]/g, "") // Quita tildes
-        .replace(/ñ/g, "n") // Cambia ñ por n
-        .replace(/ /g, "-"); // Cambia espacios por guiones
+        .normalize("NFD") 
+        .replace(/[\u0300-\u036f]/g, "") 
+        .replace(/ñ/g, "n") 
+        .replace(/ /g, "-"); 
     };
 
     const handleSearch = (e) => {
@@ -77,17 +77,14 @@ const Header = () => {
             }
         ]
         },
-        // --- ESTRUCTURA DE PÁGINAS SEPARADAS ---
         nosotros: { 
             items: ["Quiénes Somos", "Historia", "Nuestro equipo"] 
-        },
-        sostenibilidad: { items: ["Destacados", "Estrategia", "Gestión de Sostenibilidad", "Resultados", "Reportes", "Fundación Delycorp"] }
+        }
+        // NOTA: Ya no necesitamos la estructura de "sostenibilidad" aquí porque ahora es un link directo.
     };
 
-    // Helper para generar el enlace con el slug correcto
     const getNosotrosLink = (item) => {
         const slug = createSlug(item);
-        // La ruta base es /nosotros/ y el slug
         return `/nosotros/${slug}`; 
     };
 
@@ -115,6 +112,8 @@ const Header = () => {
 
             <nav className="header-bottom-row desktop-only">
                 <ul className="main-menu">
+                
+                {/* --- PRODUCTOS (Con Dropdown) --- */}
                 <li className="menu-item-has-children static-parent">
                     <a href="#" onClick={(e) => toggleDesktopMenu(e, 'productos')} className={desktopMenuOpen === 'productos' ? 'active-link' : ''}>
                     Productos {desktopMenuOpen === 'productos' ? <FaChevronUp className="menu-arrow" /> : <FaChevronDown className="menu-arrow" />}
@@ -151,7 +150,7 @@ const Header = () => {
                     )}
                 </li>
 
-                {/* --- MENÚ NOSOTROS (ESCRITORIO) --- */}
+                {/* --- NOSOTROS (Con Dropdown) --- */}
                 <li className="menu-item-has-children relative-parent">
                     <a href="#" onClick={(e) => toggleDesktopMenu(e, 'nosotros')} className={desktopMenuOpen === 'nosotros' ? 'active-link' : ''}>
                     Nosotros {desktopMenuOpen === 'nosotros' ? <FaChevronUp className="menu-arrow" /> : <FaChevronDown className="menu-arrow" />}
@@ -169,19 +168,9 @@ const Header = () => {
                     )}
                 </li>
 
-                <li className="menu-item-has-children relative-parent">
-                    <a href="#" onClick={(e) => toggleDesktopMenu(e, 'sostenibilidad')} className={desktopMenuOpen === 'sostenibilidad' ? 'active-link' : ''}>
-                    Sostenibilidad {desktopMenuOpen === 'sostenibilidad' ? <FaChevronUp className="menu-arrow" /> : <FaChevronDown className="menu-arrow" />}
-                    </a>
-                    {desktopMenuOpen === 'sostenibilidad' && (
-                    <div className="desktop-dropdown simple-menu">
-                        <ul>
-                        {menuStructure.sostenibilidad.items.map((item, i) => (
-                            <li key={i}><Link to={`/sostenibilidad/${createSlug(item)}`} onClick={() => setDesktopMenuOpen(null)}>{item}</Link></li>
-                        ))}
-                        </ul>
-                    </div>
-                    )}
+                {/* --- SOSTENIBILIDAD (AHORA ES UN LINK DIRECTO) --- */}
+                <li>
+                    <Link to="/sostenibilidad">Sostenibilidad</Link>
                 </li>
 
                 <li><Link to="/noticias">Noticias</Link></li>
@@ -207,6 +196,8 @@ const Header = () => {
             </form>
             <div className="drawer-content">
             <ul className="drawer-menu">
+                
+                {/* --- PRODUCTOS MÓVIL --- */}
                 <li className={`has-submenu ${activeSubmenu === 'productos' ? 'active' : ''}`}>
                 <div className="menu-label bold-label" onClick={() => toggleSubmenu('productos')}><span>Productos</span>{activeSubmenu === 'productos' ? <FaChevronUp /> : <FaChevronDown />}</div>
                 <div className="submenu-container" style={{ maxHeight: activeSubmenu === 'productos' ? '2000px' : '0' }}>
@@ -227,7 +218,7 @@ const Header = () => {
                 </div>
                 </li>
                 
-                {/* --- MENÚ NOSOTROS (MÓVIL) --- */}
+                {/* --- NOSOTROS MÓVIL --- */}
                 <li className={`has-submenu ${activeSubmenu === 'nosotros' ? 'active' : ''}`}>
                     <div className="menu-label bold-label" onClick={() => toggleSubmenu('nosotros')}><span>Nosotros</span>{activeSubmenu === 'nosotros' ? <FaChevronUp /> : <FaChevronDown />}</div>
                     <div className="submenu-container" style={{ maxHeight: activeSubmenu === 'nosotros' ? '500px' : '0' }}>
@@ -241,10 +232,13 @@ const Header = () => {
                     </div>
                 </li>
 
-                <li className={`has-submenu ${activeSubmenu === 'sostenibilidad' ? 'active' : ''}`}>
-                    <div className="menu-label bold-label" onClick={() => toggleSubmenu('sostenibilidad')}><span>Sostenibilidad</span>{activeSubmenu === 'sostenibilidad' ? <FaChevronUp /> : <FaChevronDown />}</div>
-                    <div className="submenu-container" style={{ maxHeight: activeSubmenu === 'sostenibilidad' ? '500px' : '0' }}><ul>{menuStructure.sostenibilidad.items.map((item, i) => (<li key={i}><Link to="#" className="simple-link" onClick={() => setIsMobileMenuOpen(false)}>{item}</Link></li>))}</ul></div>
+                {/* --- SOSTENIBILIDAD MÓVIL (AHORA ES UN LINK DIRECTO) --- */}
+                <li>
+                    <Link to="/sostenibilidad" className="menu-link-normal" onClick={() => setIsMobileMenuOpen(false)}>
+                        Sostenibilidad
+                    </Link>
                 </li>
+
                 <li><Link to="/noticias" className="menu-link-normal" onClick={() => setIsMobileMenuOpen(false)}>Noticias</Link></li>
                 <li><Link to="/trabaja" className="menu-link-normal" onClick={() => setIsMobileMenuOpen(false)}>Trabaja con Nosotros</Link></li>
                 <li><Link to="/contacto" className="menu-link-normal" onClick={() => setIsMobileMenuOpen(false)}>Contáctanos</Link></li>
