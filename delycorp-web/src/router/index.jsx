@@ -15,6 +15,9 @@ import Inversionistas from "../pages/Inversionistas";
 import Proveedores from "../pages/Proveedores";
 import Clientes from "../pages/Clientes";
 
+// NUEVO: Importar Sostenibilidad
+import Sostenibilidad from "../pages/Sostenibilidad"; 
+
 // Productos
 import ProductCategory from "../pages/ProductCategory";
 import ProductDetail from "../pages/ProductDetail";
@@ -38,6 +41,9 @@ export default function AppRouter() {
       <Route path="/nosotros/quienes-somos" element={<QuienesSomos />} />
       <Route path="/nosotros/historia" element={<Historia />} />
       <Route path="/nosotros/nuestro-equipo" element={<NuestroEquipo />} />
+
+      {/* Sostenibilidad (NUEVA RUTA AGREGADA) */}
+      <Route path="/sostenibilidad" element={<Sostenibilidad />} />
 
       {/* Productos */}
       <Route path="/productos" element={<CatalogPage />} />

@@ -9,40 +9,38 @@
 
 .footer-grid {
     display: grid;
-    /* Escritorio: Diseño clásico de 5 columnas */
-    grid-template-columns: 2fr 1fr 1fr 1fr 1fr; 
+    /* ESCRITORIO: Forzamos 4 columnas iguales (25% cada una) para simetría perfecta */
+    grid-template-columns: repeat(4, 1fr); 
     gap: 40px;
     margin-bottom: 50px;
-    padding: 0 20px;
+    align-items: start; /* Alinea todo al tope */
 }
 
 /* --- COLUMNA DE MARCA (Brand) --- */
 .footer-brand-col {
-    padding-right: 20px; /* Aire a la derecha en escritorio */
+    padding-right: 20px; 
 }
 
 .footer-logo {
-    height: 55px; /* Logo con buena presencia */
+    height: 55px; 
     margin-bottom: 25px;
     display: block;
     object-fit: contain;
-    /* Alineación izquierda por defecto */
 }
 
 .footer-desc {
     font-size: 0.95rem;
     line-height: 1.6;
-    color: #555; /* Un poco más oscuro para mejor lectura */
+    color: #555; 
     margin-bottom: 30px;
     max-width: 320px;
-    text-align: left; /* Siempre a la izquierda, es más legible */
+    text-align: left; 
 }
 
 /* REDES SOCIALES (Modernas) */
 .footer-social-icons {
     display: flex;
     gap: 15px;
-    /* Alineación izquierda */
     justify-content: flex-start; 
 }
 
@@ -52,23 +50,24 @@
     justify-content: center;
     width: 40px;
     height: 40px;
-    background-color: #f5f5f5; /* TENDENCIA: Fondo gris claro por defecto */
+    background-color: #f5f5f5; 
     color: var(--color-primary); /* Icono rojo */
-    border-radius: 12px; /* TENDENCIA: Bordes redondeados suaves (Squircle) en vez de círculo perfecto */
+    border-radius: 12px; 
     font-size: 1.2rem;
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    text-decoration: none; /* Quitar subrayado del link */
 }
 
 .footer-social-icons a:hover {
-    background-color: var(--color-primary); /* Fondo Rojo al hover */
-    color: #fff; /* Icono blanco */
+    background-color: var(--color-primary); 
+    color: #fff; 
     transform: translateY(-4px);
-    box-shadow: 0 5px 15px rgba(227, 28, 35, 0.3); /* Sombra roja suave (Glow) */
+    box-shadow: 0 5px 15px rgba(227, 28, 35, 0.3); 
 }
 
 /* --- COLUMNAS DE ENLACES (Títulos y Links) --- */
 .footer-link-col h4 {
-    color: var(--color-secondary); /* Gris oscuro / Negro */
+    color: var(--color-secondary); /* Negro/Gris oscuro */
     font-size: 1rem;
     font-weight: 800;
     margin-bottom: 25px;
@@ -100,7 +99,6 @@
 }
 
 .footer-link-col a::after {
-    /* Pequeña línea que aparece abajo al pasar el mouse */
     content: '';
     position: absolute;
     width: 0;
@@ -119,7 +117,7 @@
 .footer-bottom {
     border-top: 1px solid #e5e5e5;
     padding-top: 30px;
-    text-align: center; /* El copyright sí se ve bien centrado */
+    text-align: center; 
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -130,83 +128,84 @@
     color: #999;
 }
 
+.copyright-text a {
+    color: #999;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.copyright-text a:hover {
+    color: var(--color-corporate-blue);
+}
+
 /* =========================================
-   TENDENCIAS MODERNAS (RESPONSIVE)
+   RESPONSIVE (TABLET Y MÓVIL)
    ========================================= */
 
-/* --- SOLO TABLET (Entre 600px y 1024px) --- */
+/* --- TABLET (Entre 600px y 1024px) --- */
 @media (max-width: 1024px) {
     .footer-grid {
-        /* Los enlaces se ordenarán en 2 columnas debajo del logo */
-        /* Esto hace que quede todo cuadrado y ordenado */
+        /* CAMBIO CLAVE: Grid de 2x2 */
+        /* Como tenemos 4 elementos (Marca, Nosotros, Enlaces, Contacto) */
+        /* Esto crea un cuadrado perfecto */
         grid-template-columns: 1fr 1fr; 
-        gap: 40px;
+        gap: 50px;
     }
 
-    /* ESTO ES LO QUE PEDISTE: */
     .footer-brand-col {
-        /* grid-column: 1 / -1 significa: "Ocupa desde el principio hasta el final" */
-        grid-column: 1 / -1; 
-        
-        /* Agregamos una línea divisoria suave para que se vea ordenado */
-        border-bottom: 1px solid #f0f0f0; 
-        padding-bottom: 25px;
-        margin-bottom: 10px;
+        padding-right: 0;
+        /* En tablet ya no ocupa todo el ancho, comparte fila con 'Nosotros' */
+        /* Esto evita que quede un hueco vacío abajo */
     }
 
     .footer-desc {
-        /* Como ahora tiene todo el ancho, dejamos que el texto se estire */
-        max-width: 90%; 
+        max-width: 100%; /* Aprovecha el espacio de su columna */
     }
 }
 
-/* 2. MÓVIL (Layout Compacto Estilo App) */
+/* --- MÓVIL (Menos de 600px) --- */
 @media (max-width: 600px) {
     .footer {
         padding: 50px 0 30px;
-        text-align: left; /* SIEMPRE A LA IZQUIERDA EN MÓVIL */
+        text-align: left; 
     }
 
     .footer-grid {
-        /* TENDENCIA: Grid de 2 columnas para los enlaces en celular */
-        /* Esto evita la lista larga y aprovecha el ancho */
+        /* En móvil mantenemos 2 columnas para los enlaces para ahorrar altura */
         grid-template-columns: 1fr 1fr; 
         gap: 40px 20px;
     }
 
-    /* La marca va arriba ocupando TODO el ancho (Header del footer) */
+    /* La marca va arriba ocupando TODO el ancho */
     .footer-brand-col {
-        grid-column: 1 / -1; /* Span de borde a borde */
-        border-bottom: 1px solid #f0f0f0; /* Separación visual */
+        grid-column: 1 / -1; /* Ocupa las 2 columnas */
+        border-bottom: 1px solid #f0f0f0; 
         padding-bottom: 30px;
         margin-bottom: 10px;
     }
 
     .footer-desc {
-        max-width: 100%;
         font-size: 0.9rem;
         margin-bottom: 20px;
     }
     
-    /* Ajuste de iconos en móvil */
     .footer-social-icons {
-        justify-content: flex-start; /* Alineados a la izquierda */
+        justify-content: flex-start; 
     }
+
     .footer-social-icons a {
-        width: 45px; /* Iconos más grandes para dedos (Touch friendly) */
+        width: 45px; 
         height: 45px;
     }
 
-    /* Títulos de enlaces en móvil */
     .footer-link-col h4 {
         font-size: 0.9rem;
-        color: var(--color-secondary); /* Destacamos título en Rojo */
         margin-bottom: 15px;
     }
 
     .footer-link-col a {
-        font-size: 0.85rem; /* Texto ligeramente más compacto */
-        display: block; /* Asegura zona de clic completa */
-        padding: 5px 0; /* Más espacio vertical para tocar */
+        font-size: 0.9rem; 
+        display: block; 
+        padding: 5px 0; 
     }
 }
