@@ -1,7 +1,7 @@
     import React from 'react';
     import { Link } from 'react-router-dom';
     import { getAssetUrl } from '../utils/assets';
-    import { FaFacebookF, FaLinkedinIn, FaInstagram, FaYoutube } from 'react-icons/fa';
+    import { FaFacebookF, FaTiktok, FaInstagram, FaYoutube  } from 'react-icons/fa';
     import './Footer.css';
 
     const Footer = () => {
@@ -22,9 +22,9 @@
                 
                 {/* Iconos sociales */}
                 <div className="footer-social-icons">
-                <a href="https://facebook.com" aria-label="Facebook" target="_blank" rel="noreferrer"><FaFacebookF /></a>
-                <a href="https://linkedin.com" aria-label="LinkedIn" target="_blank" rel="noreferrer"><FaLinkedinIn /></a>
-                <a href="https://instagram.com" aria-label="Instagram" target="_blank" rel="noreferrer"><FaInstagram /></a>
+                <a href="https://www.facebook.com/delycorpdeyelli#" aria-label="Facebook" target="_blank" rel="noreferrer"><FaFacebookF /></a>
+                <a href="https://www.tiktok.com/@deyelli.pe" aria-label="TikTok" target="_blank" rel="noreferrer"><FaTiktok /></a>
+                <a href="https://www.instagram.com/deyelli.pe/" aria-label="Instagram" target="_blank" rel="noreferrer"><FaInstagram /></a>
                 <a href="https://youtube.com" aria-label="YouTube" target="_blank" rel="noreferrer"><FaYoutube /></a>
                 </div>
             </div>
