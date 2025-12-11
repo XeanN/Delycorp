@@ -98,7 +98,7 @@
 
                 {/* Botón 2: DESCARGAR EXCEL (Verde) */}
                 <a 
-                href="/requisitos-proveedores.xlsx" 
+                href="/BPA-ANX-02. REQUISITOS DOCUMENTARIOS DE PROVEEDORES.xlsx" 
                 download="Requisitos_Proveedores_Delycorp.xlsx"
                 className="action-btn-pill excel-btn"
                 >
