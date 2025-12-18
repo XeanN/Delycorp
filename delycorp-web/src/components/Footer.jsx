@@ -27,6 +27,23 @@
                 <a href="https://www.instagram.com/deyelli.pe/" aria-label="Instagram" target="_blank" rel="noreferrer"><FaInstagram /></a>
                 <a href="https://youtube.com" aria-label="YouTube" target="_blank" rel="noreferrer"><FaYoutube /></a>
                 </div>
+
+                {/* --- LIBRO DE RECLAMACIONES (Google Form) --- */}
+                <div className="libro-reclamaciones-container" style={{ marginTop: '20px' }}>
+                    <a 
+                        href="https://forms.gle/g5sRqepC62RfSGUG6" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                    >
+                        <img 
+                            src="/libro-reclamaciones.png" 
+                            alt="Libro de Reclamaciones" 
+                            style={{ width: '150px', transition: 'transform 0.3s' }}
+                            onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
+                            onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
+                        />
+                    </a>
+                </div>
             </div>
 
             {/* COLUMNA 2: NOSOTROS */}
