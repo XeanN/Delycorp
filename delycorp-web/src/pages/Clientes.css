@@ -68,91 +68,167 @@
 }
 
 /* --- 3. PILARES DE VALOR (GRID) --- */
-.value-pillars-section {
+.value-pillar-section {
     background-color: #f9f9f9;
     padding: 60px 0 80px;
 }
 
-.pillars-grid {
+.pillar-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     margin-top: 40px;
 }
 
-.pillar-card {
+.pilla-card {
     background: #fff;
     padding: 40px 25px;
     border-radius: 12px;
     text-align: center;
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    border-top: 5px solid var(--color-primary); /* Acento rojo */
+    border-top: 5px solid #E31C23; 
     transition: transform 0.3s;
 }
 
-.pillar-card:hover {
+.pilla-card:hover {
     transform: translateY(-5px);
 }
 
-.pillar-icon {
+.pilla-icon {
     font-size: 2.5rem;
-    color: var(--color-corporate-blue);
+    color: #003B71; 
     margin-bottom: 20px;
 }
 
-.pillar-card h3 {
+.pilla-card h3 {
     font-size: 1.2rem;
-    color: var(--color-text-main);
+    /* CAMBIO: Título de tarjeta oscuro/azul para lectura clara */
+    color: #333; 
     margin-bottom: 15px;
     font-weight: 700;
 }
 
-.pillar-card p {
+.pilla-card p {
     font-size: 0.95rem;
     color: #666;
     line-height: 1.6;
 }
 
 /* --- 4. CANALES Y COBERTURA --- */
+
+/* --- 4. CANALES Y COBERTURA (ESTILO SÓLIDO & PLUS) --- */
+
 .channels-section {
-    padding: 80px 0;
+    padding: 10px 0;
+    background-color: #f4f6f9; 
+    border-top: 1px solid #e0e0e0;
 }
 
-.channels-flex {
+/* Cabecera alineada a la IZQUIERDA */
+.channels-header-left {
+    text-align: left; 
+    max-width: 800px;
+    margin-bottom: 50px;
+    padding-left: 10px; /* Un pequeño respiro lateral */
+    padding-left: 25px; /* Espacio entre la línea y el texto */
+}
+
+.channels-header-left h3 {
+    color: var(--color-corporate-blue);
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 15px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 50px;
+    gap: 10px;
 }
 
-.channels-info {
-    flex: 1;
+/* El signo MÁS (+) */
+.plus-symbol {
+    color: var(--color-primary); /* Rojo Delycorp */
+    font-weight: 500; /* Más delgado para que se vea elegante */
+    font-size: 3rem; /* Grande */
+    line-height: 0;
+    margin-top: -5px; /* Ajuste visual */
 }
 
-.channels-info h3 {
-    color: var(--color-corporate-blue);
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.channels-info p {
+.channels-header-left p {
     color: #555;
-    line-height: 1.7;
-    margin-bottom: 20px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 600px; /* Para que el texto no se estire demasiado */
 }
 
-.channels-image {
-    flex: 1;
+/* Grid de Tarjetas */
+.channels-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
 }
 
-.channels-image img {
-    width: 100%;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+/* Tarjeta Sólida */
+.channel-card {
+    background-color: #fff;
+    padding: 40px 30px;
+    border-radius: 4px; /* Bordes menos redondeados = más solidez */
+    text-align: left; /* Contenido alineado a la izquierda también */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border-bottom: 4px solid transparent; /* Línea invisible abajo */
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.channel-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    border-bottom-color: var(--color-primary); /* Línea roja al pasar el mouse */
+}
+
+/* Caja del Icono (Cuadrada/Sólida en vez de círculo) */
+.icon-box-solid {
+    width: 60px;
+    height: 60px;
+    background-color: var(--color-corporate-blue); /* Fondo Azul Sólido */
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    border-radius: 8px; /* Ligeramente redondeado */
+    margin-bottom: 25px;
+    transition: background-color 0.3s;
+}
+
+.channel-card:hover .icon-box-solid {
+    background-color: var(--color-primary); /* Cambia a Rojo al hover */
+}
+
+.channel-card h4 {
+    color: #222;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.channel-card p {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* --- RESPONSIVE PARA ESTA SECCIÓN --- */
+@media (max-width: 992px) {
+    .channels-grid {
+        grid-template-columns: 1fr; /* Una columna en móvil */
+    }
+    .channels-header-left h3 {
+        font-size: 2rem;
+    }
 }
 
 /* =========================================
-   ESTILOS RESPONSIVE (MEJORADOS)
+    ESTILOS RESPONSIVE (MEJORADOS)
    ========================================= */
 
 /* 1. TABLET (IPADS / TABLETS - 601px a 1024px) */
@@ -173,7 +249,7 @@
 
     /* --- PILARES (GRID) --- */
     /* EN TABLET: Usamos 2 columnas o automático para que no se vea una lista eterna */
-    .pillars-grid {
+    .pillar-grid {
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         gap: 30px;
         padding: 0 30px; /* Margen lateral */
@@ -229,22 +305,22 @@
     }
 
     /* --- PILARES (GRID) --- */
-    .value-pillars-section {
+    .value-pillar-section {
         padding: 40px 0 60px;
     }
 
-    .pillars-grid {
+    .pilla-grid {
         grid-template-columns: 1fr; /* Una columna obligatoria */
         gap: 25px;
         padding: 0 20px;
         margin-top: 30px;
     }
 
-    .pillar-card {
+    .pilla-card {
         padding: 30px 20px; /* Tarjetas más compactas */
     }
 
-    .pillar-icon {
+    .pilla-icon {
         font-size: 2rem; /* Icono un poco más chico */
         margin-bottom: 15px;
     }

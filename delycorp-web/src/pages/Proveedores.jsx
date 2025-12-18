@@ -105,7 +105,16 @@
                 <FaFileExcel size={18} style={{marginRight: '10px'}}/> DESCARGAR FORMATO EXCEL
                 </a>
 
-                {/* Botón 3: WHATSAPP (NUEVO) */}
+                {/* Botón 3: DESCARGAR EXCEL Ingles */}
+                <a 
+                href="/BPA-ANX-02. SUPPLIER DOCUMENTATION REQUIREMENTS - English.xlsx" 
+                download="Supplier_Requirements_Delycorp.xlsx"
+                className="action-btn-pill excel-btn"
+                >
+                <FaFileExcel size={18} style={{marginRight: '10px'}}/> DOWNLOAD EXCEL FORMAT
+                </a>
+
+                {/* Botón 4: WHATSAPP (NUEVO) */}
                 <a 
                 href="https://wa.me/51999022179?text=Hola%20Delycorp,%20estoy%20interesado%20en%20ser%20proveedor." 
                 target="_blank" 

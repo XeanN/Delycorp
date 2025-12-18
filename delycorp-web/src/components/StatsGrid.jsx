@@ -50,7 +50,7 @@ const StatsGrid = () => {
                 <header className="stats-header-intro">
                     <h2 className="stats-intro-title">Una empresa con la solidez de Delycorp</h2>
                     <p className="stats-intro-text">
-                        Contamos con más de 15 años de experiencia en el rubro de consumo masivo, 
+                        Contamos con más de 8 años de experiencia en el rubro de consumo masivo, 
                         siendo un aliado estratégico que busca la recompra en tu negocio, 
                         brindando un portafolio de Best Sellers a nivel nacional.
                     </p>

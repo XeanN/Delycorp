@@ -44,9 +44,9 @@ const QuienesSomos = () => {
                             
                             <hr className="title-divider" />
 
-                            <p className="secondary-info">
+                            {/*<p className="secondary-info">
                                 La rentabilidad es nuestra meta. Contamos con más de 15 años de experiencia y somos referentes a nivel nacional.
-                            </p>
+                            </p>*/}
                             
                             <div className="internal-links-footer">
                                 <Link to="/nosotros/historia" className="internal-link-anchor">Historia</Link>

@@ -10,7 +10,7 @@
         
         <div className="news-hero">
             <div className="container">
-            <h1>Noticias y Novedades</h1>
+            <h1>Novedades</h1>
             <p>Entérate de lo último en Delycorp y nuestras marcas.</p>
             </div>
         </div>
