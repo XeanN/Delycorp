@@ -46,9 +46,9 @@ const NuestroEquipo = () => {
                             
                             <hr className="title-divider" />
 
-                            <p className="secondary-info">
+                            {/*<p className="secondary-info">
                                 Nuestra Cultura Organizacional: Un buen ambiente laboral contribuye a una mayor productividad y compromiso de los colaboradores. Por ello, nos esforzamos diariamente en brindar un ámbito de trabajo adecuado, agradable y seguro.
-                            </p>
+                            </p>*/}
                             
                             <div className="internal-links-footer">
                                 <Link to="/nosotros/quienes-somos" className="internal-link-anchor">Quiénes Somos</Link>

@@ -16,6 +16,8 @@
         { name: "D'loe", logoUrl: getAssetUrl('logos/dloe.jpg'), link: "/marca/dloe" },
         { name: "Monfer", logoUrl: getAssetUrl('logos/monfer.jpg'), link: "/marca/monfer" },
         { name: "Guandy", logoUrl: getAssetUrl('logos/huandy.jpg'), link: "/marca/Guandy" },
+        { name: "King", logoUrl: getAssetUrl('logos/king-logo.png'), link: "/marca/king-cookies" },
+        { name: "Crash", logoUrl: getAssetUrl('logos/Crash-logo.png'), link: "/marca/crash" },
     ];
 
     // Duplicamos la lista varias veces para asegurar que sea "infinita" en pantallas grandes

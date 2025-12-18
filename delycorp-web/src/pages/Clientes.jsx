@@ -1,7 +1,8 @@
     import React from 'react';
     import { Link } from 'react-router-dom';
-    import { FaChevronRight, FaChartLine, FaHandHoldingHeart, FaBoxOpen, FaStar } from 'react-icons/fa';
+    import { FaChevronRight, FaChartLine, FaHandHoldingHeart, FaBoxOpen, FaStar, FaStore, FaBoxes, FaMapMarkedAlt } from 'react-icons/fa';
     import './Clientes.css';
+    import RetailCarousel from '../components/RetailCarousel';
 
     const Clientes = () => {
 
@@ -48,14 +49,16 @@
         </div>
 
         {/* 3. PILARES DE VALOR (GRID) */}
-        <section className="value-pillars-section">
+        <section className="value-pillar-section">
             <div className="container">
-                <h3 style={{textAlign:'center', color:'#444', fontSize:'1.5rem'}}>Nuestra Propuesta de Valor</h3>
+                <h3 style={{textAlign:'center', color: '#003B71', fontSize:'2rem', fontWeight:'800', marginBottom:'40px'}}>
+                    Nuestra Propuesta de Valor
+                </h3>
                 
-                <div className="pillars-grid">
+                <div className="pillar-grid">
                     {/* Pilar 1 */}
-                    <div className="pillar-card">
-                        <FaChartLine className="pillar-icon" />
+                    <div className="pilla-card">
+                        <FaChartLine className="pilla-icon" />
                         <h3>Rentabilidad Garantizada</h3>
                         <p>
                             Ofrecemos productos de alta rotación e innovación, diseñados para generar márgenes atractivos 
@@ -64,8 +67,8 @@
                     </div>
 
                     {/* Pilar 2 */}
-                    <div className="pillar-card">
-                        <FaBoxOpen className="pillar-icon" />
+                    <div className="pilla-card">
+                        <FaBoxOpen className="pilla-icon" />
                         <h3>Portafolio Variado</h3>
                         <p>
                             Contamos con un catálogo amplio que incluye chocolates, gomas, caramelos líquidos y juguetes interactivos, 
@@ -74,8 +77,8 @@
                     </div>
 
                     {/* Pilar 3 */}
-                    <div className="pillar-card">
-                        <FaHandHoldingHeart className="pillar-icon" />
+                    <div className="pilla-card">
+                        <FaHandHoldingHeart className="pilla-icon" />
                         <h3>Soporte Integral</h3>
                         <p>
                             Brindamos acompañamiento post-venta para asegurar la correcta exhibición y rotación de los productos, 
@@ -86,28 +89,59 @@
             </div>
         </section>
 
-        {/* 4. CANALES Y COBERTURA */}
-        <section className="channels-section container">
-            <div className="channels-flex">
-                <div className="channels-info">
-                    <h3>Nuestros Canales de Atención</h3>
+        {/* 4. CANALES Y COBERTURA (DISEÑO SÓLIDO +) */}
+        <section className="channels-section">
+            <div className="container">
+                
+                {/* Título alineado a la izquierda con el signo + */}
+                <div className="channels-header-left">
+                    <h3>Nuestros Canales <span className="plus-symbol">+</span></h3>
                     <p>
-                        Entendemos las necesidades de cada formato de negocio. Actualmente atendemos con excelencia al:
+                        Entendemos las necesidades de cada formato de negocio. 
+                        Nuestra estructura sólida nos permite atender con excelencia a nivel nacional.
                     </p>
-                    <ul style={{listStyle:'none', padding:0, lineHeight:'2', color:'#555'}}>
-                        <li>✅ <strong>Canal Tradicional:</strong> Bodegas, Puestos de Mercado y Kioscos.</li>
-                        <li>✅ <strong>Canal Mayorista:</strong> Más de 170 distribuidores aliados.</li>
-                        <li>✅ <strong>Cobertura Nacional:</strong> Llegamos a más de 15,000 puntos de venta en Costa, Sierra y Selva.</li>
-                    </ul>
                 </div>
-                <div className="channels-image">
-                    <img 
-                        src="https://images.unsplash.com/photo-1578916171728-46686eac8d58?q=80&w=1000&auto=format&fit=crop" 
-                        alt="Canal tradicional bodegas" 
-                    />
+
+                <div className="channels-grid">
+                    
+                    {/* TARJETA 1 */}
+                    <div className="channel-card">
+                        <div className="icon-box-solid">
+                            <FaStore />
+                        </div>
+                        <h4>Canal Tradicional</h4>
+                        <p>
+                            Atención directa a miles de <strong>Bodegas, Mercados y Kioscos</strong>.
+                        </p>
+                    </div>
+
+                    {/* TARJETA 2 */}
+                    <div className="channel-card">
+                        <div className="icon-box-solid">
+                            <FaBoxes />
+                        </div>
+                        <h4>Canal Mayorista</h4>
+                        <p>
+                            Alianza estratégica con más de <strong>170 distribuidores</strong>.
+                        </p>
+                    </div>
+
+                    {/* TARJETA 3 */}
+                    <div className="channel-card">
+                        <div className="icon-box-solid">
+                            <FaMapMarkedAlt />
+                        </div>
+                        <h4>Cobertura Nacional</h4>
+                        <p>
+                            Presencia garantizada en <strong>15,000 puntos</strong> (Costa, Sierra y Selva).
+                        </p>
+                    </div>
+
                 </div>
             </div>
         </section>
+
+        <RetailCarousel />
 
         {/* --- 5. GALERÍA DE CLIENTES FELICES --- */}
             <section className="happy-clients-section">

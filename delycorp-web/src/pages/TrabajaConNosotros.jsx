@@ -30,10 +30,14 @@
                 Nuestro equipo de colaboradores es el recurso más valioso de nuestra compañía. 
                 Estamos convencidos de que si nuestro capital humano se siente feliz y sigue perfeccionando sus habilidades, 
                 podemos crear relaciones redituales y a largo plazo.
-                <br /><br />
-                Nos esforzamos diariamente en brindar un ámbito de trabajo adecuado, agradable y seguro.
+                {/*<br /><br />
+                Nos esforzamos diariamente en brindar un ámbito de trabajo adecuado, agradable y seguro.*/}
             </p>
+            
             </section>
+            <p className="secondary-info">
+                Nuestra Cultura Organizacional: Un buen ambiente laboral contribuye a una mayor productividad y compromiso de los colaboradores. Por ello, nos esforzamos diariamente en brindar un ámbito de trabajo adecuado, agradable y seguro.
+            </p>
 
             {/* 3. FORMULARIO DE POSTULACIÓN */}
             <section className="application-container">

@@ -15,10 +15,10 @@
             {/* COLUMNA 1: MARCA + DESCRIPCIÓN + SOCIALES */}
             <div className="footer-brand-col">
                 <img src={getAssetUrl('LogoDiapositiva.png')} alt="Delycorp" className="footer-logo" />
-                <p className="footer-desc">
+                {/*<p className="footer-desc">
                 Compañía global de alimentos que busca cautivar al consumidor a través de la innovación y el sabor de sus productos. 
                 Sustentada en una marca sombrilla fuerte, marcas reconocidas y de alto valor percibido.
-                </p>
+                </p>*/}
                 
                 {/* Iconos sociales */}
                 <div className="footer-social-icons">

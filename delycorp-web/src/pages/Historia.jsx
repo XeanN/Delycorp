@@ -46,7 +46,7 @@ const Historia = () => {
                             <hr className="title-divider" />
 
                             <p className="secondary-info">
-                                Hoy en día, gracias a nuestro equipo y clientes, hemos destacado como una empresa referente en el rubro de golosinas importadas a nivel nacional. Nuestra visión se mantiene: ser cómplices de tus momentos especiales.
+                                Hoy en día, gracias a nuestro equipo y clientes, hemos destacado como una empresa referente en el rubro de golosinas importadas a nivel nacional. Nuestro objetivo principal es que junto logremos mas.
                             </p>
                         </div>
                         
