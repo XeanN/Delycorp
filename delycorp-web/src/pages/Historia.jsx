@@ -53,7 +53,7 @@ const Historia = () => {
                         {/* Bloque Derecho (Imagen - Historia) */}
                         <div className="content-right-image">
                             <img 
-                                src={getAssetUrl('historia.png')}
+                                src={getAssetUrl('Historia.jpg')}
                                 alt="Historia de la compañía" 
                             />
                         </div>

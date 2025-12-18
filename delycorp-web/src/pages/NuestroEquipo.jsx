@@ -59,7 +59,7 @@ const NuestroEquipo = () => {
                         {/* Bloque Imagen (Se moverá a la izquierda) */}
                         <div className="content-right-image">
                             <img 
-                                src={getAssetUrl('nuestro-equipo.png')}
+                                src={getAssetUrl('Nuestro equipo.jpg')}
                                 alt="Nuestro equipo" 
                             />
                         </div>

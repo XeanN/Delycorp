@@ -56,7 +56,7 @@ const QuienesSomos = () => {
                         
                         <div className="content-right-image">
                             <img 
-                                src={getAssetUrl('quienes-somos.png')}
+                                src={getAssetUrl('quienes somos.jpg')}
                                 alt="Equipo Delycorp" 
                             />
                         </div>
