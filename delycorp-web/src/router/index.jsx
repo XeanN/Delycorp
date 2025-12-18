@@ -29,6 +29,7 @@ import Contacto from "../pages/Contacto";
 import Novedades from "../pages/Novedades";       // Antes Noticias
 import NovedadDetalle from "../pages/NovedadDetalle";
 
+
 export default function AppRouter() {
   return (
     <Routes>
