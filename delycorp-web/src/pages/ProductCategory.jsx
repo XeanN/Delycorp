@@ -2,7 +2,7 @@
     import { useParams, useSearchParams, Link } from 'react-router-dom';
     import { 
     allProducts, 
-    categoriesConfig, // Importamos la configuración nueva
+    categoriesConfig, 
     getSubcategories, 
     getCategoryName 
     } from '../data/products';
@@ -10,7 +10,7 @@
     import './ProductCategory.css';
 
     const ProductCategory = () => {
-    const { category } = useParams(); // Viene de la URL (ej: "chocolateria")
+    const { category } = useParams(); // Detecta: "dulces", "chocolateria", etc.
     const [searchParams] = useSearchParams();
     const searchQuery = searchParams.get('search');
 
@@ -18,50 +18,61 @@
     const [isFilterOpen, setIsFilterOpen] = useState(true);
     const [activeSubFilter, setActiveSubFilter] = useState(null);
 
-    // 1. TÍTULO Y COLOR INTELIGENTE
-    let pageTitle = "";
-    let bannerColor = "linear-gradient(135deg, #E31C23 0%, #b71c1c 100%)"; // Rojo por defecto
+    // --- LÓGICA DE TÍTULO Y COLOR DINÁMICO ---
+    // Usamos un estado para asegurar que el título se repinte cuando cambia la categoría
+    const [pageInfo, setPageInfo] = useState({
+        title: "Catálogo",
+        bannerColor: "linear-gradient(135deg, #E31C23 0%, #b71c1c 100%)" // Rojo por defecto
+    });
 
-    if (searchQuery) {
-        pageTitle = `Resultados para: "${searchQuery}"`;
-        bannerColor = "linear-gradient(135deg, #003B71 0%, #002a52 100%)"; // Azul para búsqueda
-    } else if (category) {
-        // AQUÍ ESTÁ EL TRUCO: Usamos la función para obtener "Chocolatería" con tilde
-        pageTitle = getCategoryName(category);
-    } else {
-        pageTitle = "Todos los Productos";
-    }
-
-    // 2. FILTRADO DE PRODUCTOS
     useEffect(() => {
+        // 1. Definir Título y Color
+        let newTitle = "Catálogo Completo";
+        let newColor = "linear-gradient(135deg, #E31C23 0%, #b71c1c 100%)"; // Rojo Delycorp
+
+        if (searchQuery) {
+            newTitle = `Resultados para: "${searchQuery}"`;
+            newColor = "linear-gradient(135deg, #003B71 0%, #002a52 100%)"; // Azul
+        } else if (category) {
+            newTitle = getCategoryName(category);
+            
+            // Cambiar color según categoría (Opcional, para que se vea más bonito)
+            if (category === 'dulces') newColor = "linear-gradient(135deg, #FF9800 0%, #F57C00 100%)"; // Naranja
+            if (category === 'chocolateria') newColor = "linear-gradient(135deg, #5D4037 0%, #3E2723 100%)"; // Marrón
+            if (category === 'bebidas') newColor = "linear-gradient(135deg, #43A047 0%, #2E7D32 100%)"; // Verde
+            if (category === 'cuidado-de-hogar') newColor = "linear-gradient(135deg, #0288D1 0%, #01579B 100%)"; // Azul Claro
+        }
+
+        setPageInfo({ title: newTitle, bannerColor: newColor });
+
+        // 2. Filtrar Productos
         let filtered = allProducts;
 
-        // Filtro por Categoría (URL)
         if (category) {
-        filtered = filtered.filter(p => p.category === category);
+            filtered = filtered.filter(p => p.category === category);
         }
 
-        // Filtro por Buscador
         if (searchQuery) {
-        const query = searchQuery.toLowerCase();
-        filtered = filtered.filter(p => 
-            p.name.toLowerCase().includes(query) || 
-            p.brand.toLowerCase().includes(query) ||
-            p.subcategory.toLowerCase().includes(query)
-        );
+            const query = searchQuery.toLowerCase();
+            filtered = filtered.filter(p => 
+                p.name.toLowerCase().includes(query) || 
+                p.brand.toLowerCase().includes(query) ||
+                p.subcategory.toLowerCase().includes(query)
+            );
         }
 
-        // Filtro por Subcategoría (Sidebar)
         if (activeSubFilter) {
-        filtered = filtered.filter(p => p.subcategory === activeSubFilter);
+            filtered = filtered.filter(p => p.subcategory === activeSubFilter);
         }
 
         setProductsToShow(filtered);
+        
+        // Debug: Mira tu consola (F12) para ver si esto cambia al navegar
+        console.log("Categoría detectada:", category, "| Título:", newTitle);
+
     }, [category, searchQuery, activeSubFilter]);
 
-    // Obtener items para el sidebar
-    // Si hay categoría seleccionada, muestra sus subcategorías (ej: Barras, Galletas)
-    // Si no (estás en "Ver todo"), muestra la lista de categorías principales
+    // Sidebar items logic
     const sidebarItems = category 
         ? getSubcategories(category) 
         : categoriesConfig;
@@ -69,11 +80,11 @@
     return (
         <div className="category-page">
         
-        {/* BANNER */}
-        <div className="category-banner" style={{ background: bannerColor }}>
+        {/* BANNER DINÁMICO */}
+        <div className="category-banner" style={{ background: pageInfo.bannerColor }}>
             <div className="banner-bg-shapes"></div>
             <div className="container banner-content">
-            <h1>{pageTitle}</h1>
+            <h1>{pageInfo.title}</h1>
             <p>{productsToShow.length} productos encontrados</p>
             </div>
         </div>
@@ -81,11 +92,11 @@
         {/* BREADCRUMBS */}
         <div className="container breadcrumbs">
             <Link to="/">Inicio</Link> <FaChevronRight className="icon" /> 
-            <Link to="/productos">Productos</Link> 
+            <Link to="/productos">Catálogo</Link> 
             {category && (
             <> 
                 <FaChevronRight className="icon" /> 
-                <span className="current">{pageTitle}</span> 
+                <span className="current">{pageInfo.title}</span> 
             </>
             )}
         </div>
@@ -102,15 +113,13 @@
                 
                 {isFilterOpen && (
                 <ul className="filter-list">
-                    {/* Botón "Ver Todo" dentro de la categoría actual */}
                     <li onClick={() => setActiveSubFilter(null)}>
                     <span className={!activeSubFilter ? 'active-filter' : ''}>
-                        {category ? "Ver todo en " + pageTitle : "Todas las categorías"}
+                        {category ? "Ver todo en " + pageInfo.title : "Todas las categorías"}
                     </span>
                     </li>
                     
                     {category ? (
-                    // MODO SUBCATEGORÍAS (Estás dentro de Chocolatería)
                     sidebarItems.map((subItem, index) => (
                         <li key={index} onClick={() => setActiveSubFilter(subItem)}>
                         <span className={activeSubFilter === subItem ? 'active-filter' : ''}>
@@ -119,7 +128,6 @@
                         </li>
                     ))
                     ) : (
-                    // MODO MENÚ PRINCIPAL (Estás en /productos)
                     sidebarItems.map((catItem, index) => (
                         <li key={index}>
                         <Link to={`/productos/${catItem.slug}`}>
@@ -154,7 +162,6 @@
             ) : (
                 <div className="no-products">
                 <h3>No se encontraron productos</h3>
-                <p>Intenta con otra categoría o término de búsqueda.</p>
                 <Link to="/productos" className="btn-reset">Volver al catálogo</Link>
                 </div>
             )}

@@ -15,20 +15,19 @@ import Inversionistas from "../pages/Inversionistas";
 import Proveedores from "../pages/Proveedores";
 import Clientes from "../pages/Clientes";
 
-// NUEVO: Importar Sostenibilidad
+// Sostenibilidad
 import Sostenibilidad from "../pages/Sostenibilidad"; 
 
 // Productos
-import ProductCategory from "../pages/ProductCategory";
+import CatalogPage from '../pages/CatalogPage'; // <--- USAREMOS ESTE (El que tiene marcas y todo)
 import ProductDetail from "../pages/ProductDetail";
-import CatalogPage from '../pages/CatalogPage';
 
 // Contacto
 import Contacto from "../pages/Contacto";
 
 // Noticias
-import Noticias from "../pages/Noticias";
-import NoticiaDetalle from "../pages/NoticiaDetalle";
+import Novedades from "../pages/Novedades";       // Antes Noticias
+import NovedadDetalle from "../pages/NovedadDetalle";
 
 export default function AppRouter() {
   return (
@@ -42,14 +41,23 @@ export default function AppRouter() {
       <Route path="/nosotros/historia" element={<Historia />} />
       <Route path="/nosotros/nuestro-equipo" element={<NuestroEquipo />} />
 
-      {/* Sostenibilidad (NUEVA RUTA AGREGADA) */}
+      {/* Sostenibilidad */}
       <Route path="/sostenibilidad" element={<Sostenibilidad />} />
 
-      {/* Productos */}
+      {/* --- CORRECCIÓN DE PRODUCTOS --- */}
+      
+      {/* 1. Catálogo General (Ver todo) */}
       <Route path="/productos" element={<CatalogPage />} />
+      
+      {/* 2. Por Categoría (CLAVE: Usar :categorySlug para que CatalogPage lo entienda) */}
       <Route path="/productos/:categorySlug" element={<CatalogPage />} />
-      <Route path="/producto/:id" element={<ProductDetail />} />
+      
+      {/* 3. Por Marca (CLAVE: Usar :brandSlug) */}
       <Route path="/marca/:brandSlug" element={<CatalogPage />} />
+
+      {/* 4. Detalle individual */}
+      <Route path="/producto/:id" element={<ProductDetail />} />
+
 
       {/* Páginas adicionales */}
       <Route path="/trabaja" element={<TrabajaConNosotros />} />
@@ -60,9 +68,9 @@ export default function AppRouter() {
       {/* Contacto */}
       <Route path="/contacto" element={<Contacto />} />
 
-      {/* Noticias */}
-      <Route path="/noticias" element={<Noticias />} />
-      <Route path="/noticias/:id" element={<NoticiaDetalle />} />
+      {/* Novedades */}
+      <Route path="/novedades" element={<Novedades />} />
+      <Route path="/novedades/:id" element={<NovedadDetalle />} />
     </Routes>
   );
 }

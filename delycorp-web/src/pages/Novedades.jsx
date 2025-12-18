@@ -2,7 +2,7 @@
     import { Link } from 'react-router-dom';
     import { newsData } from '../data/news';
     import { FaArrowRight } from 'react-icons/fa';
-    import './Noticias.css';
+    import './Novedades.css';
 
     const Noticias = () => {
     return (
@@ -18,7 +18,7 @@
         <div className="container">
             <div className="news-grid">
             {newsData.map((item) => (
-                <Link to={`/noticias/${item.id}`} key={item.id} className="news-card">
+                <Link to={`/novedades/${item.id}`} key={item.id} className="news-card">
                 <div className="news-card-image">
                     <img src={item.image} alt={item.title} />
                 </div>
