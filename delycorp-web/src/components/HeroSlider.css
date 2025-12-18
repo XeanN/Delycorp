@@ -116,67 +116,68 @@
     transform: scale(1.2);
     }
 
-    /* --- ESTILOS RESPONSIVE PARA MÓVIL (Pégalo al final de HeroSlider.css) --- */
+/* --- CONFIGURACIÓN PARA CELULARES (Móvil) --- */
 @media (max-width: 768px) {
     
     .hero-slider {
-        /* Reducimos la altura para que no ocupe toda la pantalla vertical en móvil */
-        height: auto; 
-        min-height: 500px; 
-        /* Ajustamos el margen superior para que no choque con el header móvil */
-        margin-top: 80px; 
+        /* 1. HACEMOS EL SLIDER MÁS BAJITO */
+        /* En vez de 600px o pantalla completa, le damos una altura fija menor */
+        height: 300px; 
+        min-height: 300px;
+        margin-top: 60px; /* Ajuste para que no choque con el menú */
     }
 
     .slide {
-        /* IMPORTANTE: Esto mueve la imagen un poco para que no se corte la cara de la chica */
-        /* Prueba con 'center' o '70% center' si la chica sale muy a la derecha */
-        background-position: 65% center; 
+        /* 2. CENTRAMOS LA FOTO */
+        /* 'cover' rellena el espacio. Al ser el slider más bajito (300px),
+           la imagen no se ampliará tanto y se verá más nítida y completa. */
+        background-size: cover;
+        background-position: center center; 
     }
 
+    /* Opcional: Oscurecemos un poco más para que el texto resalte */
     .slide::before {
-        /* Hacemos la capa oscura un poco más fuerte en móvil para que el texto se lea */
-        /* ya que seguramente el texto quedará encima de la chica/dibujo */
-        background: rgba(0, 0, 0, 0.6); 
+        background: rgba(0, 0, 0, 0.5); 
     }
 
     .slide-content {
-        text-align: center; /* Centramos todo el texto */
-        padding: 0 20px; /* Damos aire a los costados */
-        width: 100%;
-        
-        /* Usamos flex para centrar verticalmente el contenido dentro del slider */
+        /* Centramos el contenido perfectamente */
+        height: 100%;
         display: flex;
         flex-direction: column;
-        align-items: center;
         justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 0 15px;
     }
 
     .slide-content h2 {
-        font-size: 2rem; /* Reducimos el título gigante */
-        line-height: 1.2;
-        margin-bottom: 15px;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.8); /* Más sombra para legibilidad */
+        /* Texto más pequeño para que quepa bien */
+        font-size: 1.8rem; 
+        margin-bottom: 10px;
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
     }
 
     .slide-content p {
-        font-size: 1rem;
-        line-height: 1.4;
-        margin-bottom: 25px;
-        max-width: 100%; /* Que use todo el ancho disponible */
+        font-size: 0.95rem;
+        line-height: 1.3;
+        margin-bottom: 15px;
+        display: none; /* TRUCO: A veces en celulares es mejor ocultar el párrafo largo y dejar solo el título y botón */
+        /* Si quieres que se vea el párrafo, borra la línea 'display: none;' */
     }
 
     .cta-button {
-        width: 100%; /* Botón ancho es más fácil de tocar en celular */
-        max-width: 280px;
-        padding: 15px 0; /* Botón un poco más alto */
+        padding: 10px 25px;
+        font-size: 0.9rem;
     }
 
-    /* Ocultamos flechas para limpiar la vista, dejamos solo los puntos */
+    /* Ocultamos flechas laterales para limpiar la pantalla */
     .slider-arrow {
         display: none;
     }
 
+    /* Ajustamos los puntitos de navegación */
     .slider-dots {
-        bottom: 15px; /* Subimos un poquito los puntos */
+        bottom: 10px;
     }
 }

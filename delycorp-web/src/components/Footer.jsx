@@ -45,7 +45,7 @@
                 <ul>
                 {/* Nuevo enlace directo */}
                 <li><Link to="/sostenibilidad">Sostenibilidad</Link></li>
-                <li><Link to="/noticias">Noticias</Link></li>
+                <li><Link to="/novedades">Novedades</Link></li>
                 <li><Link to="/inversionistas">Inversionistas</Link></li>
                 <li><Link to="/proveedores">Proveedores</Link></li>
                 <li><Link to="/clientes">Clientes</Link></li>
