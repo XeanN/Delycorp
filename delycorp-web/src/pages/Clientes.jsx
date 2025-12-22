@@ -18,7 +18,7 @@
         {/* 1. HERO BANNER */}
         <section className="clients-hero">
             <div className="clients-hero-content">
-            <h1>Nuestros Clientes</h1>
+            <h1>Clientes</h1>
             <p>Aliados estratégicos para el crecimiento de tu negocio.</p>
             </div>
         </section>

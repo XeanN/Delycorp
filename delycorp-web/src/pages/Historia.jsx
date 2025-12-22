@@ -39,8 +39,9 @@ const Historia = () => {
                             <h1 className="page-main-title">Nuestra Historia</h1>
                             
                             <p className="intro-paragraph">
-                                Nuestro fundador inició esta aventura con una experiencia previa en el rubro de consumo masivo por más de 15 años. 
-                                En el año 2016, tomó la decisión de ingresar al rubro de golosinas importadas, buscando comercializar productos que generen el efecto ¡Wow! por su innovación, calidad y precio.
+                                Gracias a la confianza de nuestros clientes y al esfuerzo de nuestro equipo, 
+                                lideramos el sector de golosinas importadas a nivel nacional. Juntos, impulsamos un crecimiento
+                                constante y logramos más en cada paso.
                             </p>
                             
                             <hr className="title-divider" />
