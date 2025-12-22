@@ -37,21 +37,22 @@ const QuienesSomos = () => {
                             <h1 className="page-main-title">Quiénes Somos</h1>
                             
                             <p className="intro-paragraph">
-                                Somos un aliado estratégico cuyo objetivo es que tu cliente busque la recompra en tu negocio. 
-                                Brindamos el soporte post-venta, un portafolio variado con nuestras líneas Best Seller de golosinas 
-                                Deyelli, Bebida Refrescante D'Loe y Bombones Monfer.
+                                Impulsamos tu negocio como aliado estratégico, enfocados en maximizar tus ventas y fidelizar
+                                a tus clientes con la variedad y calidad característicos de nuestro portafolio de productos como
+                                Golosinas interactivas Deyelli, Bebidas D'Loe y Bombones Monfer, Así mismo, estamos comprometidos
+                                en brindar un soporte post-venta profesional.
                             </p>
                             
-                            <hr className="title-divider" />
+                            {/*<hr className="title-divider" />*/}
 
                             {/*<p className="secondary-info">
                                 La rentabilidad es nuestra meta. Contamos con más de 15 años de experiencia y somos referentes a nivel nacional.
                             </p>*/}
                             
-                            <div className="internal-links-footer">
+                            {/*<div className="internal-links-footer">
                                 <Link to="/nosotros/historia" className="internal-link-anchor">Historia</Link>
                                 <Link to="/nosotros/nuestro-equipo" className="internal-link-anchor">Nuestro Equipo</Link>
-                            </div>
+                            </div>*/}
                         </div>
                         
                         <div className="content-right-image">
