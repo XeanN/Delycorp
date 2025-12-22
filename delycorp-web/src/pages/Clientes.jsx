@@ -95,10 +95,10 @@
                 
                 {/* Título alineado a la izquierda con el signo + */}
                 <div className="channels-header-left">
-                    <h3>Nuestros Canales {/*<span className="plus-symbol">+</span>*/}</h3>
+                    <h3>Nuestros Aliados {/*<span className="plus-symbol">+</span>*/}</h3>
                     <p>
-                        Entendemos las necesidades de cada formato de negocio. 
-                        Nuestra estructura sólida nos permite atender con excelencia a nivel nacional.
+                        Nuestros aliados estratégicos persiguen un crecimiento sostenido, así mismo convierten cada 
+                        oportunidad de negocio que ofrecemos en buenos resultados que consolidan el éxito de su empresa.
                     </p>
                 </div>
 
@@ -109,9 +109,9 @@
                         <div className="icon-box-solid">
                             <FaStore />
                         </div>
-                        <h4>Canal Tradicional</h4>
+                        <h4>Mayoristas</h4>
                         <p>
-                            Atención directa a miles de <strong>Bodegas, Mercados y Kioscos</strong>.
+                            Son más de <strong>4,470 clientes</strong> ubicados en los principales mercados de abastos del país que confían en nuestro portafolio de productos.
                         </p>
                     </div>
 
@@ -120,9 +120,9 @@
                         <div className="icon-box-solid">
                             <FaBoxes />
                         </div>
-                        <h4>Canal Mayorista</h4>
+                        <h4>Distribuidores</h4>
                         <p>
-                            Alianza estratégica con más de <strong>170 distribuidores</strong>.
+                            Hemos establecido una alianza estratégica basada en el "win to win" con más de <strong>130 distribuidores</strong> a nivel nacional.
                         </p>
                     </div>
 
@@ -133,7 +133,7 @@
                         </div>
                         <h4>Cobertura Nacional</h4>
                         <p>
-                            Presencia garantizada en <strong>15,000 puntos</strong> (Costa, Sierra y Selva).
+                            Presencia garantizada en <strong>130,000 bodegas</strong> y markets en las 3 regiones del País.
                         </p>
                     </div>
 

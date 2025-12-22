@@ -13,9 +13,9 @@
             <span className="subtitle">SOSTENIBILIDAD Y COMPROMISO</span>
             <h2>Generamos valor para el Perú</h2>
             <p>
-                En Delycorp no solo distribuimos productos, entregamos bienestar. 
-                Estamos comprometidos con el desarrollo sostenible, apoyando a nuestras 
-                comunidades y garantizando la excelencia en cada paso de nuestra cadena de valor.
+                Nuestro compromiso en Delycorp trasciende lo comercial: promovemos el desarrollo sostenible,
+                apoyamos activamente a nuestras comunidades y garantizamos la excelencia en cada paso de nuestra
+                cadena de valor, contribuyendo a un país más próspero y responsable
             </p>
             
             <div className="stats-row">
