@@ -126,11 +126,10 @@
 
 /* Cabecera alineada a la IZQUIERDA */
 .channels-header-left {
-    text-align: left; 
+    text-align: center; /* Centra el texto */
     max-width: 800px;
-    margin-bottom: 50px;
-    padding-left: 10px; /* Un pequeño respiro lateral */
-    padding-left: 25px; /* Espacio entre la línea y el texto */
+    margin: 0 auto 50px; /* El 'auto' en los laterales centra el contenedor */
+    padding: 0 20px; 
 }
 
 .channels-header-left h3 {
@@ -140,6 +139,7 @@
     margin-bottom: 15px;
     display: flex;
     align-items: center;
+    justify-content: center; /* Centra el contenido si hay iconos o símbolos */
     gap: 10px;
 }
 
@@ -156,7 +156,8 @@
     color: #555;
     font-size: 1.1rem;
     line-height: 1.6;
-    max-width: 600px; /* Para que el texto no se estire demasiado */
+    margin: 0 auto; /* Asegura que el párrafo también se centre dentro del bloque */
+    max-width: 600px; 
 }
 
 /* Grid de Tarjetas */

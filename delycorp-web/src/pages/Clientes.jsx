@@ -95,7 +95,7 @@
                 
                 {/* Título alineado a la izquierda con el signo + */}
                 <div className="channels-header-left">
-                    <h3>Nuestros Canales <span className="plus-symbol">+</span></h3>
+                    <h3>Nuestros Canales {/*<span className="plus-symbol">+</span>*/}</h3>
                     <p>
                         Entendemos las necesidades de cada formato de negocio. 
                         Nuestra estructura sólida nos permite atender con excelencia a nivel nacional.
@@ -147,7 +147,7 @@
             <section className="happy-clients-section">
                 <div className="container">
                     <div className="section-header">
-                        <h2>CLIENTES FELICES</h2>
+                        <h2>Clientes felices</h2>
                         <p>Negocios que crecen día a día junto a nosotros.</p>
                     </div>
 

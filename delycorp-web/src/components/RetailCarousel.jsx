@@ -76,7 +76,7 @@
     return (
         <section className="retail-carousel-section">
         <div className="container">
-            <h2 className="retail-title">Nuestros Clientes Retail</h2>
+            <h2 className="retail-title">Canal moderno</h2>
             <p className="retail-subtitle">Las cadenas más importantes confían en nosotros</p>
         </div>
         
